@@ -4,6 +4,64 @@ import { streamText } from "ai";
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
+// ============ RATE LIMITING CONFIG ============
+const RATE_LIMIT = {
+  MAX_MESSAGES_PER_DAY: 50,  // Max messages per IP per day
+  MAX_MESSAGES_PER_HOUR: 20, // Max messages per IP per hour
+};
+
+// In-memory store for rate limiting (resets on server restart)
+// For production, consider using Redis or a database
+const rateLimitStore = new Map<string, { count: number; hourCount: number; resetTime: number; hourResetTime: number }>();
+
+function getRateLimitInfo(ip: string): { allowed: boolean; remaining: number; resetIn: number } {
+  const now = Date.now();
+  const dayInMs = 24 * 60 * 60 * 1000;
+  const hourInMs = 60 * 60 * 1000;
+  
+  let record = rateLimitStore.get(ip);
+  
+  // Initialize or reset if day has passed
+  if (!record || now > record.resetTime) {
+    record = { 
+      count: 0, 
+      hourCount: 0,
+      resetTime: now + dayInMs,
+      hourResetTime: now + hourInMs
+    };
+    rateLimitStore.set(ip, record);
+  }
+  
+  // Reset hourly count if hour has passed
+  if (now > record.hourResetTime) {
+    record.hourCount = 0;
+    record.hourResetTime = now + hourInMs;
+  }
+  
+  const dailyRemaining = RATE_LIMIT.MAX_MESSAGES_PER_DAY - record.count;
+  const hourlyRemaining = RATE_LIMIT.MAX_MESSAGES_PER_HOUR - record.hourCount;
+  const remaining = Math.min(dailyRemaining, hourlyRemaining);
+  
+  // Check both limits
+  if (record.count >= RATE_LIMIT.MAX_MESSAGES_PER_DAY) {
+    return { allowed: false, remaining: 0, resetIn: Math.ceil((record.resetTime - now) / 1000 / 60) };
+  }
+  
+  if (record.hourCount >= RATE_LIMIT.MAX_MESSAGES_PER_HOUR) {
+    return { allowed: false, remaining: 0, resetIn: Math.ceil((record.hourResetTime - now) / 1000 / 60) };
+  }
+  
+  return { allowed: true, remaining: remaining - 1, resetIn: 0 };
+}
+
+function incrementRateLimit(ip: string): void {
+  const record = rateLimitStore.get(ip);
+  if (record) {
+    record.count++;
+    record.hourCount++;
+  }
+}
+
 // System prompt defining the Building Concierge assistant
 const SYSTEM_PROMPT = `You are a Helpful Building Concierge assistant for a residential building. Your role is to assist residents and visitors with questions about the building's amenities, rules, navigation, and general inquiries.
 
@@ -85,6 +143,30 @@ The Metropolitan Residences
 
 export async function POST(req: Request) {
   try {
+    // Get client IP for rate limiting
+    const forwardedFor = req.headers.get("x-forwarded-for");
+    const ip = forwardedFor ? forwardedFor.split(",")[0].trim() : "unknown";
+    
+    // Check rate limit
+    const rateLimitInfo = getRateLimitInfo(ip);
+    if (!rateLimitInfo.allowed) {
+      return new Response(
+        JSON.stringify({ 
+          error: "Rate limit exceeded",
+          message: `You've reached your message limit. Please try again in ${rateLimitInfo.resetIn} minutes.`,
+          resetIn: rateLimitInfo.resetIn
+        }),
+        {
+          status: 429,
+          headers: { 
+            "Content-Type": "application/json",
+            "X-RateLimit-Remaining": "0",
+            "X-RateLimit-Reset": rateLimitInfo.resetIn.toString()
+          },
+        }
+      );
+    }
+    
     // Log to check if API key is present
     console.log("API Key present:", !!process.env.ANTHROPIC_API_KEY);
     console.log("API Key prefix:", process.env.ANTHROPIC_API_KEY?.substring(0, 10));
@@ -98,11 +180,18 @@ export async function POST(req: Request) {
       messages,
       onFinish: ({ text }) => {
         console.log("Stream finished, text length:", text.length);
+        // Increment rate limit only after successful response
+        incrementRateLimit(ip);
       },
     });
 
     console.log("Stream created successfully");
-    return result.toDataStreamResponse();
+    
+    // Add rate limit headers to response
+    const response = result.toDataStreamResponse();
+    response.headers.set("X-RateLimit-Remaining", rateLimitInfo.remaining.toString());
+    
+    return response;
   } catch (error: unknown) {
     console.error("Chat API Error:", error);
     // Return more detailed error for debugging

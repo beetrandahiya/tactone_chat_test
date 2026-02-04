@@ -1,0 +1,168 @@
+{
+  "graph": {
+    "id": "HSLU_Floor5",
+    "directed": true,
+    "graph_attrs": {
+      "rankdir": "LR",
+      "nodesep": 0.6,
+      "ranksep": 1.0
+    },
+    "defaults": {
+      "node": {
+        "shape": "box",
+        "style": "filled,rounded",
+        "fontname": "Arial",
+        "fontsize": 9
+      },
+      "edge": {
+        "fontname": "Arial",
+        "fontsize": 7
+      }
+    },
+    "nodes": [
+      { "id": "5A011", "label_raw": "5A011\nLernwelt\n97m²", "room_type": "Lernwelt", "area_m2": 97, "style": { "fillcolor": "#90EE90" } },
+      { "id": "5A051", "label_raw": "5A051\nPerron-Lounge\n217m²", "room_type": "Perron-Lounge", "area_m2": 217, "style": { "fillcolor": "#90EE90" } },
+      { "id": "5A131", "label_raw": "5A131\nLernwelt\n217m²", "room_type": "Lernwelt", "area_m2": 217, "style": { "fillcolor": "#90EE90" } },
+      { "id": "5A201", "label_raw": "5A201\nLernwelt\n394m²", "room_type": "Lernwelt", "area_m2": 394, "style": { "fillcolor": "#90EE90" } },
+
+      { "id": "5C021", "label_raw": "5C021\nUnterricht\n63m²", "room_type": "Unterricht", "area_m2": 63, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C011", "label_raw": "5C011\nUnterricht\n76m²", "room_type": "Unterricht", "area_m2": 76, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C031", "label_raw": "5C031\nUnterricht\n76m²", "room_type": "Unterricht", "area_m2": 76, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C051", "label_raw": "5C051\nUnterricht\n102m²", "room_type": "Unterricht", "area_m2": 102, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C071", "label_raw": "5C071\nUnterricht\n102m²", "room_type": "Unterricht", "area_m2": 102, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C091", "label_raw": "5C091\nUnterricht\n102m²", "room_type": "Unterricht", "area_m2": 102, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C111", "label_raw": "5C111\nUnterricht\n76m²", "room_type": "Unterricht", "area_m2": 76, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C121", "label_raw": "5C121\nUnterricht\n102m²", "room_type": "Unterricht", "area_m2": 102, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C141", "label_raw": "5C141\nUnterricht\n102m²", "room_type": "Unterricht", "area_m2": 102, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C161", "label_raw": "5C161\nUnterricht\n102m²", "room_type": "Unterricht", "area_m2": 102, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C181", "label_raw": "5C181\nUnterricht\n76m²", "room_type": "Unterricht", "area_m2": 76, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C201", "label_raw": "5C201\nUnterricht\n76m²", "room_type": "Unterricht", "area_m2": 76, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C211", "label_raw": "5C211\nUnterricht\n90m²", "room_type": "Unterricht", "area_m2": 90, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C231", "label_raw": "5C231\nUnterricht\n90m²", "room_type": "Unterricht", "area_m2": 90, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C251", "label_raw": "5C251\nUnterricht\n89m²", "room_type": "Unterricht", "area_m2": 89, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C271", "label_raw": "5C271\nUnterricht\n89m²", "room_type": "Unterricht", "area_m2": 89, "style": { "fillcolor": "#87CEEB" } },
+      { "id": "5C281", "label_raw": "5C281\nUnterricht\n89m²", "room_type": "Unterricht", "area_m2": 89, "style": { "fillcolor": "#87CEEB" } },
+
+      { "id": "5B011", "label_raw": "5B011\nGruppenraum\n42m²", "room_type": "Gruppenraum", "area_m2": 42, "style": { "fillcolor": "#FFFF99" } },
+      { "id": "5B021", "label_raw": "5B021\nVorraum\n18m²", "room_type": "Vorraum", "area_m2": 18, "style": { "fillcolor": "#FFFF99" } },
+      { "id": "5B291", "label_raw": "5B291\nVorraum\n15m²", "room_type": "Vorraum", "area_m2": 15, "style": { "fillcolor": "#FFFF99" } },
+      { "id": "5B292", "label_raw": "5B292\nGruppenraum\n42m²", "room_type": "Gruppenraum", "area_m2": 42, "style": { "fillcolor": "#FFFF99" } },
+
+      { "id": "5B072", "label_raw": "5B072\nVorraum WC\n28m²", "room_type": "Vorraum WC", "area_m2": 28, "style": { "fillcolor": "#FFB6C1" } },
+      { "id": "5B151", "label_raw": "5B151\nVorraum WC\n26m²", "room_type": "Vorraum WC", "area_m2": 26, "style": { "fillcolor": "#FFB6C1" } },
+      { "id": "5B242", "label_raw": "5B242\nVorraum Teekueche\n33m²", "room_type": "Vorraum Teekueche", "area_m2": 33, "style": { "fillcolor": "#FFB6C1" } },
+
+      { "id": "5B061", "label_raw": "5B061\nInklusions-WC\n39m²", "room_type": "Inklusions-WC", "area_m2": 39, "style": { "fillcolor": "#FF69B4" } },
+      { "id": "5B071", "label_raw": "5B071\nWC IV\n4m²", "room_type": "WC IV", "area_m2": 4, "style": { "fillcolor": "#FF69B4" } },
+      { "id": "5B141", "label_raw": "5B141\nWC H\n15m²", "room_type": "WC H", "area_m2": 15, "style": { "fillcolor": "#FFB6C1" } },
+      { "id": "5B142", "label_raw": "5B142\nWC IV\n4m²", "room_type": "WC IV", "area_m2": 4, "style": { "fillcolor": "#FF69B4" } },
+      { "id": "5B143", "label_raw": "5B143\nWC D\n19m²", "room_type": "WC D", "area_m2": 19, "style": { "fillcolor": "#FFB6C1" } },
+      { "id": "5B231", "label_raw": "5B231\nWC D\n21m²", "room_type": "WC D", "area_m2": 21, "style": { "fillcolor": "#FFB6C1" } },
+      { "id": "5B232", "label_raw": "5B232\nWC H\n16m²", "room_type": "WC H", "area_m2": 16, "style": { "fillcolor": "#FFB6C1" } },
+      { "id": "5B241", "label_raw": "5B241\nWC IV\n4m²", "room_type": "WC IV", "area_m2": 4, "style": { "fillcolor": "#FF69B4" } },
+
+      { "id": "5B221", "label_raw": "5B221\nPutzraum\n12m²", "room_type": "Putzraum", "area_m2": 12, "style": { "fillcolor": "#D3D3D3" } },
+
+      { "id": "5K031", "label_raw": "5K031\nElektro\n14m²", "room_type": "Elektro", "area_m2": 14, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K032", "label_raw": "5K032\nVorraum Elektro\n24m²", "room_type": "Vorraum Elektro", "area_m2": 24, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K041", "label_raw": "5K041\nStairwell\n110m²", "room_type": "Stairwell", "area_m2": 110, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K042", "label_raw": "5K042\nVorraum Lift\n24m²", "room_type": "Vorraum Lift", "area_m2": 24, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K051", "label_raw": "5K051\nLift", "room_type": "Lift", "area_m2": null, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K052", "label_raw": "5K052\nLift", "room_type": "Lift", "area_m2": null, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K053", "label_raw": "5K053\nLift", "room_type": "Lift", "area_m2": null, "style": { "fillcolor": "#FFA500" } },
+
+      { "id": "5K102", "label_raw": "5K102\nElektro\n14m²", "room_type": "Elektro", "area_m2": 14, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K111", "label_raw": "5K111\nVorraum Elektro\n24m²", "room_type": "Vorraum Elektro", "area_m2": 24, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K121", "label_raw": "5K121\nStairwell\n110m²", "room_type": "Stairwell", "area_m2": 110, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K122", "label_raw": "5K122\nVorraum Lift\n23m²", "room_type": "Vorraum Lift", "area_m2": 23, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K131", "label_raw": "5K131\nLift", "room_type": "Lift", "area_m2": null, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K132", "label_raw": "5K132\nLift", "room_type": "Lift", "area_m2": null, "style": { "fillcolor": "#FFA500" } },
+
+      { "id": "5K181", "label_raw": "5K181\nElektro\n14m²", "room_type": "Elektro", "area_m2": 14, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K182", "label_raw": "5K182\nVorraum Elektro\n24m²", "room_type": "Vorraum Elektro", "area_m2": 24, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K191", "label_raw": "5K191\nStairwell\n110m²", "room_type": "Stairwell", "area_m2": 110, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K192", "label_raw": "5K192\nVorraum Lift\n24m²", "room_type": "Vorraum Lift", "area_m2": 24, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K201", "label_raw": "5K201\nLift", "room_type": "Lift", "area_m2": null, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K202", "label_raw": "5K202\nLift", "room_type": "Lift", "area_m2": null, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K203", "label_raw": "5K203\nLift", "room_type": "Lift", "area_m2": null, "style": { "fillcolor": "#FFA500" } },
+
+      { "id": "5K262", "label_raw": "5K262\nStairwell\n26m²", "room_type": "Stairwell", "area_m2": 26, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K271", "label_raw": "5K271\nVorraum Lift\n26m²", "room_type": "Vorraum Lift", "area_m2": 26, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K281", "label_raw": "5K281\nLift", "room_type": "Lift", "area_m2": null, "style": { "fillcolor": "#FFA500" } },
+      { "id": "5K282", "label_raw": "5K282\nLift", "room_type": "Lift", "area_m2": null, "style": { "fillcolor": "#FFA500" } }
+    ],
+    "edges": [
+      { "source": "5A011", "target": "5K041", "bidirectional": true, "label_raw": "15m EI30", "distance_m": 15, "fire_rating": "EI30", "style": { "color": "#FF4500", "penwidth": 2, "linestyle": "dashed" } },
+      { "source": "5K041", "target": "5A051", "bidirectional": true, "label_raw": "15m EI30", "distance_m": 15, "fire_rating": "EI30", "style": { "color": "#FF4500", "penwidth": 2, "linestyle": "dashed" } },
+      { "source": "5A051", "target": "5K121", "bidirectional": true, "label_raw": "25m EI30", "distance_m": 25, "fire_rating": "EI30", "style": { "color": "#FF4500", "penwidth": 2, "linestyle": "dashed" } },
+      { "source": "5K121", "target": "5A131", "bidirectional": true, "label_raw": "15m EI30", "distance_m": 15, "fire_rating": "EI30", "style": { "color": "#FF4500", "penwidth": 2, "linestyle": "dashed" } },
+      { "source": "5A131", "target": "5K191", "bidirectional": true, "label_raw": "25m EI30", "distance_m": 25, "fire_rating": "EI30", "style": { "color": "#FF4500", "penwidth": 2, "linestyle": "dashed" } },
+      { "source": "5K191", "target": "5A201", "bidirectional": true, "label_raw": "15m EI30", "distance_m": 15, "fire_rating": "EI30", "style": { "color": "#FF4500", "penwidth": 2, "linestyle": "dashed" } },
+      { "source": "5A201", "target": "5K271", "bidirectional": true, "label_raw": "35m EI30", "distance_m": 35, "fire_rating": "EI30", "style": { "color": "#FF4500", "penwidth": 2, "linestyle": "dashed" } },
+
+      { "source": "5K041", "target": "5K042", "bidirectional": true, "label_raw": "5m", "distance_m": 5, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K042", "target": "5K051", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K042", "target": "5K052", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K042", "target": "5K053", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K041", "target": "5K032", "bidirectional": true, "label_raw": "4m", "distance_m": 4, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K032", "target": "5K031", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+
+      { "source": "5K121", "target": "5K122", "bidirectional": true, "label_raw": "5m", "distance_m": 5, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K122", "target": "5K131", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K122", "target": "5K132", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K121", "target": "5K111", "bidirectional": true, "label_raw": "4m", "distance_m": 4, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K111", "target": "5K102", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+
+      { "source": "5K191", "target": "5K192", "bidirectional": true, "label_raw": "5m", "distance_m": 5, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K192", "target": "5K201", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K192", "target": "5K202", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K192", "target": "5K203", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K191", "target": "5K182", "bidirectional": true, "label_raw": "4m", "distance_m": 4, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K182", "target": "5K181", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+
+      { "source": "5K271", "target": "5K262", "bidirectional": true, "label_raw": "5m", "distance_m": 5, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K271", "target": "5K281", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+      { "source": "5K271", "target": "5K282", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#FFA500", "penwidth": 2, "linestyle": "solid" } },
+
+      { "source": "5K032", "target": "5C021", "bidirectional": true, "label_raw": "6m", "distance_m": 6, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5K032", "target": "5C011", "bidirectional": true, "label_raw": "6m", "distance_m": 6, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5A051", "target": "5C031", "bidirectional": true, "label_raw": "16m", "distance_m": 16, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5A051", "target": "5C051", "bidirectional": true, "label_raw": "20m", "distance_m": 20, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5A051", "target": "5C071", "bidirectional": true, "label_raw": "24m", "distance_m": 24, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5K111", "target": "5C091", "bidirectional": true, "label_raw": "6m", "distance_m": 6, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5A131", "target": "5C111", "bidirectional": true, "label_raw": "16m", "distance_m": 16, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5A131", "target": "5C121", "bidirectional": true, "label_raw": "20m", "distance_m": 20, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5A131", "target": "5C141", "bidirectional": true, "label_raw": "24m", "distance_m": 24, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5K182", "target": "5C161", "bidirectional": true, "label_raw": "6m", "distance_m": 6, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5A201", "target": "5C181", "bidirectional": true, "label_raw": "16m", "distance_m": 16, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5A201", "target": "5C201", "bidirectional": true, "label_raw": "20m", "distance_m": 20, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5A201", "target": "5C211", "bidirectional": true, "label_raw": "24m", "distance_m": 24, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B242", "target": "5C231", "bidirectional": true, "label_raw": "6m", "distance_m": 6, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B242", "target": "5C251", "bidirectional": true, "label_raw": "6m", "distance_m": 6, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5K271", "target": "5C271", "bidirectional": true, "label_raw": "6m", "distance_m": 6, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B291", "target": "5C281", "bidirectional": true, "label_raw": "6m", "distance_m": 6, "fire_rating": null, "style": { "color": "#4169E1", "penwidth": 1.5, "linestyle": "solid" } },
+
+      { "source": "5A011", "target": "5B021", "bidirectional": true, "label_raw": "8m", "distance_m": 8, "fire_rating": null, "style": { "color": "#DAA520", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B021", "target": "5B011", "bidirectional": true, "label_raw": "6m", "distance_m": 6, "fire_rating": null, "style": { "color": "#DAA520", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B291", "target": "5B292", "bidirectional": true, "label_raw": "6m", "distance_m": 6, "fire_rating": null, "style": { "color": "#DAA520", "penwidth": 1.5, "linestyle": "solid" } },
+
+      { "source": "5A201", "target": "5B291", "bidirectional": true, "label_raw": "10m", "distance_m": 10, "fire_rating": null, "style": { "color": "#228B22", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5A201", "target": "5B242", "bidirectional": true, "label_raw": "22m", "distance_m": 22, "fire_rating": null, "style": { "color": "#228B22", "penwidth": 1.5, "linestyle": "solid" } },
+
+      { "source": "5A051", "target": "5B072", "bidirectional": true, "label_raw": "18m", "distance_m": 18, "fire_rating": null, "style": { "color": "#DB7093", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B072", "target": "5B061", "bidirectional": true, "label_raw": "5m", "distance_m": 5, "fire_rating": null, "style": { "color": "#DB7093", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B072", "target": "5B071", "bidirectional": true, "label_raw": "4m", "distance_m": 4, "fire_rating": null, "style": { "color": "#DB7093", "penwidth": 1.5, "linestyle": "solid" } },
+
+      { "source": "5A131", "target": "5B151", "bidirectional": true, "label_raw": "18m", "distance_m": 18, "fire_rating": null, "style": { "color": "#DB7093", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B151", "target": "5B141", "bidirectional": true, "label_raw": "5m", "distance_m": 5, "fire_rating": null, "style": { "color": "#DB7093", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B151", "target": "5B142", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#DB7093", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B151", "target": "5B143", "bidirectional": true, "label_raw": "5m", "distance_m": 5, "fire_rating": null, "style": { "color": "#DB7093", "penwidth": 1.5, "linestyle": "solid" } },
+
+      { "source": "5B242", "target": "5B231", "bidirectional": true, "label_raw": "5m", "distance_m": 5, "fire_rating": null, "style": { "color": "#DB7093", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B242", "target": "5B241", "bidirectional": true, "label_raw": "3m", "distance_m": 3, "fire_rating": null, "style": { "color": "#DB7093", "penwidth": 1.5, "linestyle": "solid" } },
+      { "source": "5B242", "target": "5B232", "bidirectional": true, "label_raw": "5m", "distance_m": 5, "fire_rating": null, "style": { "color": "#DB7093", "penwidth": 1.5, "linestyle": "solid" } },
+
+      { "source": "5B242", "target": "5B221", "bidirectional": true, "label_raw": "4m", "distance_m": 4, "fire_rating": null, "style": { "color": "#808080", "penwidth": 1, "linestyle": "solid" } }
+    ]
+  }
+}

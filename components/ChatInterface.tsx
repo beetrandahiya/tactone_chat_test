@@ -1,21 +1,44 @@
 "use client";
 
 import { useChat } from "ai/react";
-import { useEffect, useRef } from "react";
-import { Send, Bot, User, Loader2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Send, Bot, User, Loader2, AlertCircle } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 export default function ChatInterface() {
+  const [rateLimitError, setRateLimitError] = useState<string | null>(null);
+  const [messagesRemaining, setMessagesRemaining] = useState<number | null>(null);
+  
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } =
     useChat({
       api: "/api/chat",
       onError: (err) => {
         console.error("useChat error:", err);
         console.error("Error message:", err.message);
+        // Check if it's a rate limit error
+        if (err.message.includes("Rate limit") || err.message.includes("message limit")) {
+          setRateLimitError(err.message);
+        }
       },
       onResponse: (response) => {
         console.log("Response status:", response.status);
         console.log("Response headers:", Object.fromEntries(response.headers.entries()));
+        
+        // Clear rate limit error on successful response
+        setRateLimitError(null);
+        
+        // Update remaining messages from header
+        const remaining = response.headers.get("X-RateLimit-Remaining");
+        if (remaining) {
+          setMessagesRemaining(parseInt(remaining, 10));
+        }
+        
+        // Handle rate limit response
+        if (response.status === 429) {
+          response.json().then(data => {
+            setRateLimitError(data.message || "Rate limit exceeded. Please try again later.");
+          });
+        }
       },
     });
 
@@ -204,7 +227,7 @@ export default function ChatInterface() {
         )}
 
         {/* Error message */}
-        {error && (
+        {error && !rateLimitError && (
           <div
             className="flex justify-center"
             role="alert"
@@ -215,6 +238,20 @@ export default function ChatInterface() {
                 Sorry, something went wrong. Please try again or contact
                 building management if the issue persists.
               </p>
+            </div>
+          </div>
+        )}
+
+        {/* Rate limit error message */}
+        {rateLimitError && (
+          <div
+            className="flex justify-center"
+            role="alert"
+            aria-live="assertive"
+          >
+            <div className="px-4 py-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-sm flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 flex-shrink-0" />
+              <p>{rateLimitError}</p>
             </div>
           </div>
         )}
@@ -274,6 +311,13 @@ export default function ChatInterface() {
         <p className="mt-2 text-xs text-gray-500 text-center">
           For emergencies, please call 911 or building security at (555)
           123-4567
+          {messagesRemaining !== null && (
+            <span className="block mt-1 text-gray-400">
+              {messagesRemaining > 0 
+                ? `${messagesRemaining} messages remaining today`
+                : "Message limit reached"}
+            </span>
+          )}
         </p>
       </section>
     </main>
