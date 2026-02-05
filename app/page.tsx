@@ -16,9 +16,9 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-lg font-semibold text-gray-900">
-                The Metropolitan Residences
+                TACTONE
               </h1>
-              <p className="text-xs text-gray-500">Building Concierge</p>
+              <p className="text-xs text-gray-500">Floor 5 Navigator</p>
             </div>
           </div>
           <div className="flex items-center">

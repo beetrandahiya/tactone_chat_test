@@ -5,10 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Building Concierge | The Metropolitan Residences",
+  title: "Tactone",
   description:
-    "Your virtual building assistant - get help with amenities, rules, navigation, and more.",
-  keywords: ["building", "concierge", "assistant", "amenities", "residential"],
+    "Navigate HSLU Floor 5 with ease - your friendly building navigation assistant.",
+  keywords: ["tactone", "navigation", "HSLU", "building", "wayfinding"],
 };
 
 export default function RootLayout({

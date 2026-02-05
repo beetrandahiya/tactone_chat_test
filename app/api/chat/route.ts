@@ -1,5 +1,14 @@
 import { anthropic } from "@ai-sdk/anthropic";
 import { streamText } from "ai";
+import {
+  findShortestPath,
+  findRoom,
+  getRoomsByType,
+  getAllRoomTypes,
+  findNearestOfType,
+  formatPathForAI,
+  getBuildingSummary,
+} from "@/lib/pathfinding";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -62,84 +71,168 @@ function incrementRateLimit(ip: string): void {
   }
 }
 
-// System prompt defining the Building Concierge assistant
-const SYSTEM_PROMPT = `You are a Helpful Building Concierge assistant for a residential building. Your role is to assist residents and visitors with questions about the building's amenities, rules, navigation, and general inquiries.
+// ============ PATHFINDING HELPER ============
+interface Message {
+  role: string;
+  content: string;
+}
 
-## Your Personality
-- Professional, friendly, and approachable
-- Concise but thorough in your responses
-- Proactive in offering helpful suggestions
-- Patient and understanding with all inquiries
+function extractNavigationRequest(messages: Message[]): { from: string | null; to: string | null; findType: string | null } {
+  // Get the last user message
+  const lastUserMessage = [...messages].reverse().find(m => m.role === "user");
+  if (!lastUserMessage) return { from: null, to: null, findType: null };
+  
+  const text = lastUserMessage.content.toLowerCase();
+  
+  // Common patterns for navigation requests
+  const fromToPattern = /(?:from|starting from|i'm at|i am at|currently at)\s+(\w+)\s+(?:to|go to|get to|reach|find)\s+(\w+)/i;
+  const toFromPattern = /(?:to|go to|get to|reach|find)\s+(\w+)\s+(?:from|starting from)\s+(\w+)/i;
+  const simpleToPattern = /(?:how do i get to|where is|find|directions to|navigate to|go to)\s+(\w+)/i;
+  const findTypePattern = /(?:where is the|find the|nearest|closest)\s+(wc|toilet|bathroom|restroom|lift|elevator|stairwell|stairs)/i;
+  
+  let match;
+  
+  // Check for "from X to Y" pattern
+  match = text.match(fromToPattern);
+  if (match) {
+    return { from: match[1].toUpperCase(), to: match[2].toUpperCase(), findType: null };
+  }
+  
+  // Check for "to Y from X" pattern
+  match = text.match(toFromPattern);
+  if (match) {
+    return { from: match[2].toUpperCase(), to: match[1].toUpperCase(), findType: null };
+  }
+  
+  // Check for finding a type of room
+  match = text.match(findTypePattern);
+  if (match) {
+    let roomType = match[1].toLowerCase();
+    // Map common terms to room types
+    if (["toilet", "bathroom", "restroom"].includes(roomType)) roomType = "wc";
+    if (["elevator"].includes(roomType)) roomType = "lift";
+    if (["stairs"].includes(roomType)) roomType = "stairwell";
+    return { from: null, to: null, findType: roomType };
+  }
+  
+  // Check for simple "where is X" pattern
+  match = text.match(simpleToPattern);
+  if (match) {
+    return { from: null, to: match[1].toUpperCase(), findType: null };
+  }
+  
+  // Look for room IDs in the message (e.g., 5A011, 5C021)
+  const roomIdPattern = /\b(5[A-K]\d{3})\b/gi;
+  const roomIds = text.match(roomIdPattern);
+  if (roomIds && roomIds.length >= 2) {
+    return { from: roomIds[0].toUpperCase(), to: roomIds[1].toUpperCase(), findType: null };
+  } else if (roomIds && roomIds.length === 1) {
+    return { from: null, to: roomIds[0].toUpperCase(), findType: null };
+  }
+  
+  return { from: null, to: null, findType: null };
+}
 
-## Building Data
-<!-- PLACEHOLDER: Insert specific building information here -->
-### Building Name
-The Metropolitan Residences
+function generateNavigationContext(messages: Message[]): string {
+  const navRequest = extractNavigationRequest(messages);
+  let context = "";
+  
+  // If user is asking for navigation between two points
+  if (navRequest.from && navRequest.to) {
+    const pathResult = findShortestPath(navRequest.from, navRequest.to);
+    context += `\n\n=== NAVIGATION DATA (from pathfinding system) ===\n`;
+    context += formatPathForAI(pathResult);
+    context += `\n=== END NAVIGATION DATA ===\n`;
+  }
+  
+  // If user is looking for a specific room
+  if (navRequest.to && !navRequest.from) {
+    const rooms = findRoom(navRequest.to);
+    if (rooms.length > 0) {
+      context += `\n\n=== ROOM SEARCH RESULTS ===\n`;
+      context += `Found ${rooms.length} matching room(s):\n`;
+      for (const room of rooms.slice(0, 5)) {
+        context += `- ${room.id}: ${room.roomType}${room.area ? ` (${room.area}m²)` : ""}\n`;
+      }
+      context += `=== END ROOM SEARCH ===\n`;
+    }
+  }
+  
+  // If user is looking for a type of room (e.g., nearest WC)
+  if (navRequest.findType) {
+    const rooms = getRoomsByType(navRequest.findType);
+    context += `\n\n=== ROOMS OF TYPE "${navRequest.findType.toUpperCase()}" ===\n`;
+    if (rooms.length > 0) {
+      for (const room of rooms) {
+        context += `- ${room.id}: ${room.roomType}${room.area ? ` (${room.area}m²)` : ""}\n`;
+      }
+    } else {
+      context += `No rooms found of this type.\n`;
+    }
+    context += `=== END ROOM TYPE SEARCH ===\n`;
+  }
+  
+  return context;
+}
 
-### Address
-123 Main Street, Downtown District
+// Get building summary once at startup
+const BUILDING_SUMMARY = getBuildingSummary();
+const ALL_ROOM_TYPES = getAllRoomTypes();
 
-### Operating Hours
-- Lobby: 24/7
-- Concierge Desk: 6:00 AM - 10:00 PM daily
-- Management Office: Monday-Friday, 9:00 AM - 5:00 PM
+// System prompt for HSLU Floor 5 Building Concierge
+const SYSTEM_PROMPT = `You are a friendly navigation assistant for HSLU Floor 5. Help people find their way around in a warm, conversational tone.
 
-### Amenities
-1. **Fitness Center** (Floor B1)
-   - Hours: 5:00 AM - 11:00 PM
-   - Equipment: Cardio machines, free weights, yoga studio
-   - Reservation required for yoga studio
+## Your Style
+- Friendly and casual, like a helpful friend
+- Keep responses SHORT and simple
+- Use plain language, no technical jargon
+- Be encouraging and positive
 
-2. **Rooftop Pool & Lounge** (Floor 25)
-   - Hours: 7:00 AM - 9:00 PM (seasonal)
-   - Guest policy: Maximum 2 guests per resident
-   - Towels provided
+## Building Basics
+${BUILDING_SUMMARY}
 
-3. **Business Center** (Floor 2)
-   - Hours: 24/7 with key card access
-   - Includes: Meeting rooms, printers, high-speed WiFi
-   - Meeting room reservations: Contact front desk
+## Room Types: ${ALL_ROOM_TYPES.join(", ")}
 
-4. **Package Room** (Floor 1)
-   - 24/7 access with key card
-   - Large packages held at concierge desk
+## Room Zones
+- 5A = Learning areas (Lernwelt, Perron-Lounge)
+- 5B = WCs, group rooms
+- 5C = Classrooms
+- 5K = Lifts, stairs, utilities
 
-5. **Parking Garage** (Floors B1-B3)
-   - Reserved spots available for purchase
-   - Guest parking: First 2 hours free with validation
+## CRITICAL INSTRUCTIONS FOR NAVIGATION
 
-### Building Rules Summary
-- Quiet hours: 10:00 PM - 8:00 AM
-- Pets: Dogs and cats allowed (under 50 lbs), must be leashed in common areas
-- Smoking: Prohibited in all indoor areas and within 25 feet of entrances
-- Move-ins/Move-outs: Must be scheduled with management, use freight elevator only
-- Short-term rentals: Not permitted
+You will sometimes receive navigation data between === markers. This is INTERNAL DATA for you to use.
 
-### Important Contacts
-- Emergency: 911
-- Building Security: Extension 100 or (555) 123-4567
-- Maintenance Requests: Submit through resident portal or call Extension 200
-- Management Office: Extension 300
+**NEVER show this raw data to users!** Instead, translate it into simple, friendly directions.
 
-### Navigation Tips
-- Main elevators: Located in the main lobby
-- Freight elevator: Accessible from loading dock (back of building)
-- Stairwells: Located at east and west ends of each floor
-- Mail room: Adjacent to the lobby on Floor 1
-<!-- END PLACEHOLDER -->
+### Bad response (DON'T do this):
+"=== NAVIGATION DATA === PATH_FOUND: Total distance: 50m..."
 
-## Response Guidelines
-1. Always be helpful and provide accurate information based on the building data above
-2. If you don't have specific information, acknowledge this and suggest who to contact
-3. For emergencies, always direct to appropriate emergency services first
-4. Offer to help with follow-up questions
-5. When giving directions, be specific about floor numbers and landmarks
-6. Format responses clearly using markdown when appropriate (lists, bold for emphasis)
+### Good response (DO this):
+"Sure! From where you are, head towards the stairwell - it's about 15 meters straight ahead. Then walk through the Perron-Lounge and you'll find classroom 5C051 on your right. It's about a 1-minute walk! 🚶"
 
-## Important Notes
-- Never share personal information about other residents
-- For legal or liability questions, direct to building management
-- For after-hours emergencies, always provide security contact information`;
+## How to Give Directions
+1. Start with a friendly acknowledgment
+2. Give simple step-by-step directions using landmarks
+3. Mention approximate walking time (not raw meters unless helpful)
+4. End with something encouraging
+
+## Examples of Good Responses
+
+**For "How do I get to 5C051?"**
+"Classroom 5C051 is in the teaching area! Head through the Perron-Lounge and you'll find it there. Should take less than a minute to walk. 😊"
+
+**For "Where's the nearest WC?"**
+"There are a few WCs on this floor! The closest ones are near the Perron-Lounge area. Look for rooms 5B071 or 5B141. Need more specific directions from where you are?"
+
+**For "What rooms are here?"**
+"Floor 5 has learning spaces (Lernwelt), a nice Perron-Lounge, several classrooms, group rooms, and of course WCs and lifts. What are you looking for?"
+
+## Remember
+- Be helpful and warm
+- Keep it simple
+- NEVER expose raw navigation data or technical output
+- If you don't know something, say so kindly`;
 
 export async function POST(req: Request) {
   try {
@@ -174,9 +267,13 @@ export async function POST(req: Request) {
     const { messages } = await req.json();
     console.log("Received messages:", JSON.stringify(messages));
 
+    // Generate navigation context if user is asking for directions
+    const navigationContext = generateNavigationContext(messages);
+    const systemPromptWithNav = SYSTEM_PROMPT + navigationContext;
+
     const result = await streamText({
       model: anthropic("claude-3-haiku-20240307"),
-      system: SYSTEM_PROMPT,
+      system: systemPromptWithNav,
       messages,
       onFinish: ({ text }) => {
         console.log("Stream finished, text length:", text.length);

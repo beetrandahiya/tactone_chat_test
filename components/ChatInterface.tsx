@@ -59,7 +59,7 @@ export default function ChatInterface() {
     <main
       className="flex flex-col h-[calc(100vh-64px)] max-w-2xl mx-auto"
       role="main"
-      aria-label="Chat with Building Concierge"
+      aria-label="HSLU Floor 5 Navigation Assistant"
     >
       {/* Messages Area */}
       <section
@@ -75,18 +75,19 @@ export default function ChatInterface() {
               <Bot className="w-8 h-8 text-primary-600" aria-hidden="true" />
             </div>
             <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              Welcome to Building Concierge
+              HSLU Floor 5 Navigator
             </h2>
             <p className="text-gray-600 max-w-md">
-              I&apos;m here to help you with information about building
-              amenities, rules, navigation, and any other questions you may
-              have. How can I assist you today?
+              I can help you find your way around HSLU Floor 5. Ask me for
+              directions between rooms, where to find classrooms, WCs, lifts,
+              or any other location on this floor.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 justify-center">
               {[
-                "What are the gym hours?",
-                "Tell me about parking",
-                "Building rules",
+                "How do I get from 5A011 to 5C051?",
+                "Where are the WCs?",
+                "Find classroom 5C121",
+                "What rooms are on this floor?",
               ].map((suggestion) => (
                 <button
                   key={suggestion}
@@ -271,7 +272,7 @@ export default function ChatInterface() {
           aria-label="Send a message"
         >
           <label htmlFor="chat-input" className="sr-only">
-            Type your message to the building concierge
+            Ask for directions or room information
           </label>
           <input
             ref={inputRef}
@@ -280,7 +281,7 @@ export default function ChatInterface() {
             type="text"
             value={input}
             onChange={handleInputChange}
-            placeholder="Ask about amenities, rules, or directions..."
+            placeholder="Ask for directions, e.g., 'How do I get from 5A011 to 5C051?'"
             disabled={isLoading}
             autoComplete="off"
             className="flex-1 px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-500 text-sm
@@ -309,8 +310,7 @@ export default function ChatInterface() {
           </button>
         </form>
         <p className="mt-2 text-xs text-gray-500 text-center">
-          For emergencies, please call 911 or building security at (555)
-          123-4567
+          HSLU Floor 5 Navigation • Powered by Tactone
           {messagesRemaining !== null && (
             <span className="block mt-1 text-gray-400">
               {messagesRemaining > 0 
