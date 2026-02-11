@@ -64,9 +64,19 @@ export interface AnalyticsData {
 const DATA_DIR = path.join(process.cwd(), "data");
 const ANALYTICS_FILE = path.join(DATA_DIR, "analytics.json");
 
+// Check if we're in a read-only environment (like Vercel serverless)
+function isReadOnlyEnvironment(): boolean {
+  return process.env.VERCEL === "1" || process.env.NODE_ENV === "production";
+}
+
 function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (isReadOnlyEnvironment()) return;
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+  } catch (error) {
+    console.warn("Could not create data directory:", error);
   }
 }
 
@@ -81,22 +91,32 @@ function getEmptyAnalytics(): AnalyticsData {
 }
 
 export function loadAnalytics(): AnalyticsData {
-  ensureDataDir();
   try {
+    ensureDataDir();
     if (fs.existsSync(ANALYTICS_FILE)) {
       const data = fs.readFileSync(ANALYTICS_FILE, "utf-8");
       return JSON.parse(data);
     }
   } catch (error) {
-    console.error("Error loading analytics:", error);
+    // In production/serverless, file system access may fail - return empty data
+    console.warn("Could not load analytics (this is expected in serverless environments):", error);
   }
   return getEmptyAnalytics();
 }
 
 export function saveAnalytics(data: AnalyticsData): void {
-  ensureDataDir();
-  data.lastUpdated = new Date().toISOString();
-  fs.writeFileSync(ANALYTICS_FILE, JSON.stringify(data, null, 2));
+  // Skip saving in read-only environments
+  if (isReadOnlyEnvironment()) {
+    console.log("Skipping analytics save in read-only environment");
+    return;
+  }
+  try {
+    ensureDataDir();
+    data.lastUpdated = new Date().toISOString();
+    fs.writeFileSync(ANALYTICS_FILE, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.warn("Could not save analytics:", error);
+  }
 }
 
 // ============ HASHING ============
