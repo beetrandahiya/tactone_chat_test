@@ -28,6 +28,31 @@
 }
 
 @layer components {
+  /* Prose styling for terms and privacy pages */
+  .prose {
+    @apply text-gray-700 leading-relaxed;
+  }
+  
+  .prose h1 {
+    @apply text-2xl font-bold text-gray-900 mb-4;
+  }
+  
+  .prose h2 {
+    @apply text-xl font-semibold text-gray-900 mt-8 mb-3;
+  }
+  
+  .prose p {
+    @apply mb-4;
+  }
+  
+  .prose ul {
+    @apply list-disc list-inside mb-4 space-y-1;
+  }
+  
+  .prose a {
+    @apply text-primary-600 hover:text-primary-700 underline;
+  }
+
   /* Scrollbar styling for chat area */
   .overflow-y-auto::-webkit-scrollbar {
     width: 6px;
