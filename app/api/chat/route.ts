@@ -9,6 +9,7 @@ import {
   formatPathForAI,
   getBuildingSummary,
 } from "@/lib/pathfinding";
+import { logInteraction, logRouteQuery, logRoomSearch } from "@/lib/analytics";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -271,6 +272,13 @@ export async function POST(req: Request) {
     const navigationContext = generateNavigationContext(messages);
     const systemPromptWithNav = SYSTEM_PROMPT + navigationContext;
 
+    // Track timing for analytics
+    const startTime = Date.now();
+    
+    // Extract the last user message for logging
+    const lastUserMessage = [...messages].reverse().find((m: Message) => m.role === "user");
+    const navRequest = extractNavigationRequest(messages);
+
     const result = await streamText({
       model: anthropic("claude-3-haiku-20240307"),
       system: systemPromptWithNav,
@@ -279,6 +287,45 @@ export async function POST(req: Request) {
         console.log("Stream finished, text length:", text.length);
         // Increment rate limit only after successful response
         incrementRateLimit(ip);
+        
+        // Log interaction for analytics
+        const responseTime = Date.now() - startTime;
+        try {
+          logInteraction({
+            ip,
+            userMessage: lastUserMessage?.content || "",
+            assistantResponse: text.substring(0, 500), // Store first 500 chars
+            navigationData: {
+              fromRoom: navRequest.from,
+              toRoom: navRequest.to,
+              roomType: navRequest.findType,
+              pathFound: navigationContext.includes("PATH_FOUND") || navigationContext.includes("Found"),
+              distance: null,
+            },
+            responseTime,
+          });
+          
+          // Log route query if applicable
+          if (navRequest.from && navRequest.to) {
+            logRouteQuery({
+              fromRoom: navRequest.from,
+              toRoom: navRequest.to,
+              pathFound: navigationContext.includes("PATH_FOUND"),
+              distance: 0, // Could extract from context if needed
+            });
+          }
+          
+          // Log room search if applicable
+          if (navRequest.to && !navRequest.from) {
+            logRoomSearch({
+              roomId: navRequest.to,
+              roomType: navRequest.findType || "unknown",
+              found: navigationContext.includes("Found"),
+            });
+          }
+        } catch (logError) {
+          console.error("Analytics logging error:", logError);
+        }
       },
     });
 
