@@ -2,7 +2,7 @@
 
 import { useChat } from "ai/react";
 import { useEffect, useRef, useState } from "react";
-import { Send, Bot, User, Loader2, AlertCircle } from "lucide-react";
+import { Send, Navigation, User, Loader2, AlertCircle, MapPin } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 export default function ChatInterface() {
@@ -57,32 +57,48 @@ export default function ChatInterface() {
 
   return (
     <main
-      className="flex flex-col h-[calc(100vh-64px)] max-w-2xl mx-auto"
+      className="flex flex-col flex-1 min-h-0 w-full max-w-2xl mx-auto"
       role="main"
-      aria-label="HSLU Floor 5 Navigation Assistant"
+      aria-label="HSLU Perron Navigation Assistant"
     >
       {/* Messages Area */}
       <section
-        className="flex-1 overflow-y-auto p-4 space-y-4"
+        className="flex-1 overflow-y-auto p-5 space-y-4"
         aria-label="Chat messages"
         aria-live="polite"
         aria-atomic="false"
       >
         {/* Welcome message when no messages */}
         {messages.length === 0 && (
-          <div className="flex flex-col items-center justify-center h-full text-center px-4">
-            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
-              <Bot className="w-8 h-8 text-primary-600" aria-hidden="true" />
+          <div className="flex flex-col items-center justify-center h-full text-center px-2">
+            {/* Navigation Icon */}
+            <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mb-5 shadow-md">
+              <Navigation className="w-9 h-9 text-white" aria-hidden="true" />
             </div>
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              HSLU Floor 5 Navigator
+
+            {/* Title */}
+            <h2 className="text-xl font-bold text-gray-900 mb-2">
+              Perron Navigator
             </h2>
-            <p className="text-gray-600 max-w-md">
-              I can help you find your way around HSLU Floor 5. Ask me for
-              directions between rooms, where to find classrooms, WCs, lifts,
-              or any other location on this floor.
+
+            {/* Description */}
+            <p className="text-sm text-gray-500 max-w-xs leading-relaxed mb-5">
+              I can help you find your way around the HSLU Perron Building. Ask me for directions between rooms, classrooms, WCs, lifts, or any other location.
             </p>
-            <div className="mt-6 flex flex-wrap gap-2 justify-center">
+
+            {/* Location notice */}
+            <div className="flex items-center gap-2 bg-primary-50 border border-primary-200 rounded-full px-4 py-2.5 mb-6">
+              <MapPin className="w-4 h-4 text-primary-600 flex-shrink-0" aria-hidden="true" />
+              <span className="text-xs font-medium text-primary-800">
+                Please include your current location in your message
+              </span>
+            </div>
+
+            {/* Try asking label */}
+            <p className="text-xs text-gray-400 mb-3">Try asking:</p>
+
+            {/* Suggestion buttons - vertical stack */}
+            <div className="flex flex-col gap-2.5 w-full max-w-xs">
               {[
                 "How do I get from 5A011 to 5C051?",
                 "Where are the WCs?",
@@ -104,7 +120,7 @@ export default function ChatInterface() {
                       inputRef.current.focus();
                     }
                   }}
-                  className="px-4 py-2 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                  className="px-4 py-2.5 text-sm border border-gray-200 hover:border-primary-300 hover:bg-primary-50 text-gray-700 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
                 >
                   {suggestion}
                 </button>
@@ -132,14 +148,14 @@ export default function ChatInterface() {
                 className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
                   message.role === "user"
                     ? "bg-primary-600"
-                    : "bg-gray-200"
+                    : "bg-primary-100"
                 }`}
                 aria-hidden="true"
               >
                 {message.role === "user" ? (
                   <User className="w-4 h-4 text-white" />
                 ) : (
-                  <Bot className="w-4 h-4 text-gray-600" />
+                  <Navigation className="w-4 h-4 text-primary-600" />
                 )}
               </div>
 
@@ -209,10 +225,10 @@ export default function ChatInterface() {
           <div className="flex justify-start" aria-live="polite">
             <div className="flex items-start gap-3">
               <div
-                className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center"
+                className="flex-shrink-0 w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center"
                 aria-hidden="true"
               >
-                <Bot className="w-4 h-4 text-gray-600" />
+                <Navigation className="w-4 h-4 text-primary-600" />
               </div>
               <div className="px-4 py-3 rounded-2xl rounded-bl-md bg-gray-100 shadow-soft">
                 <div className="flex items-center gap-2">
@@ -263,12 +279,12 @@ export default function ChatInterface() {
 
       {/* Input Area */}
       <section
-        className="border-t border-gray-200 bg-white p-4"
+        className="border-t border-gray-100 bg-white px-4 pt-3 pb-4"
         aria-label="Message input"
       >
         <form
           onSubmit={handleSubmit}
-          className="flex items-center gap-3"
+          className="flex items-center gap-2"
           aria-label="Send a message"
         >
           <label htmlFor="chat-input" className="sr-only">
@@ -281,10 +297,10 @@ export default function ChatInterface() {
             type="text"
             value={input}
             onChange={handleInputChange}
-            placeholder="Ask for directions, e.g., 'How do I get from 5A011 to 5C051?'"
+            placeholder="Ask for directions, e.g., 'How do I get...'"
             disabled={isLoading}
             autoComplete="off"
-            className="flex-1 px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-500 text-sm
+            className="flex-1 px-4 py-3 bg-gray-50 border border-gray-200 rounded-full text-gray-800 placeholder-gray-400 text-sm
                        focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
                        disabled:opacity-50 disabled:cursor-not-allowed
                        transition-all duration-200"
@@ -298,9 +314,9 @@ export default function ChatInterface() {
             disabled={isLoading || !input.trim()}
             aria-label="Send message"
             className="flex-shrink-0 w-11 h-11 bg-primary-600 hover:bg-primary-700 disabled:bg-gray-300 
-                       text-white rounded-xl flex items-center justify-center
+                       text-white rounded-full flex items-center justify-center
                        focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
-                       disabled:cursor-not-allowed transition-all duration-200"
+                       disabled:cursor-not-allowed transition-all duration-200 shadow-sm"
           >
             {isLoading ? (
               <Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" />
@@ -309,8 +325,8 @@ export default function ChatInterface() {
             )}
           </button>
         </form>
-        <p className="mt-2 text-xs text-gray-500 text-center">
-          HSLU Floor 5 Navigation • Powered by Tactone
+        <p className="mt-2.5 text-xs text-gray-400 text-center">
+          HSLU Perron Navigation • Powered by Tactone
           {messagesRemaining !== null && (
             <span className="block mt-1 text-gray-400">
               {messagesRemaining > 0 
