@@ -1,0 +1,969 @@
+{
+  "graph": {
+    "id": "HSLU_FloorA01",
+    "directed": true,
+    "coordinate_system": {
+      "origin": "bottom_left_page",
+      "units": "m",
+      "scale_m_per_pdf_unit": 0.02775725,
+      "page_size_pdf_units": {
+        "width": 6095.0,
+        "height": 1190.0
+      }
+    },
+    "nodes": [
+      {
+        "id": "1A011",
+        "name": "Grossraumbüro",
+        "label": "1A011 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 84.41,
+        "center_m": {"x": 138.5, "y": 25.0}
+      },
+      {
+        "id": "1A021",
+        "name": "Büro/Sitzung",
+        "label": "1A021 Büro/Sitzung",
+        "room_type": "Büro/Sitzung",
+        "area_m2": 12.55,
+        "center_m": {"x": 122.0, "y": 25.0}
+      },
+      {
+        "id": "1A022",
+        "name": "Rückzug",
+        "label": "1A022 Rückzug",
+        "room_type": "Rückzug",
+        "area_m2": 6.15,
+        "center_m": {"x": 118.0, "y": 25.0}
+      },
+      {
+        "id": "1A023",
+        "name": "Rückzug",
+        "label": "1A023 Rückzug",
+        "room_type": "Rückzug",
+        "area_m2": 6.01,
+        "center_m": {"x": 115.0, "y": 25.0}
+      },
+      {
+        "id": "1A031",
+        "name": "Grossraumbüro",
+        "label": "1A031 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 165.19,
+        "center_m": {"x": 105.0, "y": 25.0}
+      },
+      {
+        "id": "1A071",
+        "name": "Aufenthalt",
+        "label": "1A071 Aufenthalt",
+        "room_type": "Aufenthalt",
+        "area_m2": 63.38,
+        "center_m": {"x": 95.0, "y": 25.0}
+      },
+      {
+        "id": "1A081",
+        "name": "Grossraumbüro",
+        "label": "1A081 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 98.77,
+        "center_m": {"x": 85.0, "y": 25.0}
+      },
+      {
+        "id": "1A091",
+        "name": "Büro/Sitzung",
+        "label": "1A091 Büro/Sitzung",
+        "room_type": "Büro/Sitzung",
+        "area_m2": 12.55,
+        "center_m": {"x": 75.0, "y": 25.0}
+      },
+      {
+        "id": "1A102",
+        "name": "Co-Working",
+        "label": "1A102 Co-Working",
+        "room_type": "Co-Working",
+        "area_m2": 90.83,
+        "center_m": {"x": 65.0, "y": 25.0}
+      },
+      {
+        "id": "1A131",
+        "name": "Büro/Sitzung",
+        "label": "1A131 Büro/Sitzung",
+        "room_type": "Büro/Sitzung",
+        "area_m2": 12.55,
+        "center_m": {"x": 55.0, "y": 25.0}
+      },
+      {
+        "id": "1A141",
+        "name": "Grossraumbüro",
+        "label": "1A141 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 232.41,
+        "center_m": {"x": 45.0, "y": 25.0}
+      },
+      {
+        "id": "1A171",
+        "name": "Büro/Sitzung",
+        "label": "1A171 Büro/Sitzung",
+        "room_type": "Büro/Sitzung",
+        "area_m2": 12.98,
+        "center_m": {"x": 120.0, "y": 20.0}
+      },
+      {
+        "id": "1A181",
+        "name": "Grossraumbüro",
+        "label": "1A181 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 168.66,
+        "center_m": {"x": 100.0, "y": 20.0}
+      },
+      {
+        "id": "1A251",
+        "name": "Grossraumbüro",
+        "label": "1A251 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 61.72,
+        "center_m": {"x": 50.0, "y": 20.0}
+      },
+      {
+        "id": "1A261",
+        "name": "Gard/DUD",
+        "label": "1A261 Gard/DUD",
+        "room_type": "Gard/DUD",
+        "area_m2": 26.41,
+        "center_m": {"x": 145.0, "y": 18.0}
+      },
+      {
+        "id": "1A262",
+        "name": "Putzraum",
+        "label": "1A262 Putzraum",
+        "room_type": "Putzraum",
+        "area_m2": 3.66,
+        "center_m": {"x": 142.0, "y": 17.0}
+      },
+      {
+        "id": "1A263",
+        "name": "Korridor",
+        "label": "1A263 Korridor",
+        "room_type": "Korridor",
+        "area_m2": 30.15,
+        "center_m": {"x": 140.0, "y": 20.5}
+      },
+      {
+        "id": "1A264",
+        "name": "IV WC/DU",
+        "label": "1A264 IV WC/DU",
+        "room_type": "IV WC/DU",
+        "area_m2": 3.66,
+        "center_m": {"x": 135.0, "y": 17.0}
+      },
+      {
+        "id": "1A281",
+        "name": "Gard/DUH",
+        "label": "1A281 Gard/DUH",
+        "room_type": "Gard/DUH",
+        "area_m2": 26.41,
+        "center_m": {"x": 130.0, "y": 18.0}
+      },
+      {
+        "id": "1A282",
+        "name": "WCD",
+        "label": "1A282 WCD",
+        "room_type": "WCD",
+        "area_m2": 5.76,
+        "center_m": {"x": 128.0, "y": 17.0}
+      },
+      {
+        "id": "1A283",
+        "name": "WCH",
+        "label": "1A283 WCH",
+        "room_type": "WCH",
+        "area_m2": 5.55,
+        "center_m": {"x": 126.0, "y": 17.0}
+      },
+      {
+        "id": "1A291",
+        "name": "Massage/Therapie",
+        "label": "1A291 Massage/Therapie",
+        "room_type": "Massage/Therapie",
+        "area_m2": 29.57,
+        "center_m": {"x": 110.0, "y": 17.0}
+      },
+      {
+        "id": "1A292",
+        "name": "Aufenthalt",
+        "label": "1A292 Aufenthalt",
+        "room_type": "Aufenthalt",
+        "area_m2": 39.69,
+        "center_m": {"x": 105.0, "y": 17.0}
+      },
+      {
+        "id": "1B011",
+        "name": "Office-Garden",
+        "label": "1B011 Office-Garden",
+        "room_type": "Office-Garden",
+        "area_m2": 10.76,
+        "center_m": {"x": 100.0, "y": 12.0}
+      },
+      {
+        "id": "1B021",
+        "name": "Sitzung",
+        "label": "1B021 Sitzung",
+        "room_type": "Sitzung",
+        "area_m2": 15.91,
+        "center_m": {"x": 95.0, "y": 12.0}
+      },
+      {
+        "id": "1B022",
+        "name": "Sitzung",
+        "label": "1B022 Sitzung",
+        "room_type": "Sitzung",
+        "area_m2": 15.91,
+        "center_m": {"x": 90.0, "y": 12.0}
+      },
+      {
+        "id": "1B061",
+        "name": "Korridor",
+        "label": "1B061 Korridor",
+        "room_type": "Korridor",
+        "area_m2": 28.47,
+        "center_m": {"x": 75.0, "y": 12.0}
+      },
+      {
+        "id": "1B071",
+        "name": "Teeküche",
+        "label": "1B071 Teeküche",
+        "room_type": "Teeküche",
+        "area_m2": 18.15,
+        "center_m": {"x": 70.0, "y": 12.0}
+      },
+      {
+        "id": "1B072",
+        "name": "Elektrozentrale",
+        "label": "1B072 Elektrozentrale",
+        "room_type": "Elektrozentrale",
+        "area_m2": 8.10,
+        "center_m": {"x": 68.0, "y": 11.0}
+      },
+      {
+        "id": "1B073",
+        "name": "Lager",
+        "label": "1B073 Lager",
+        "room_type": "Lager",
+        "area_m2": 18.53,
+        "center_m": {"x": 65.0, "y": 11.0}
+      },
+      {
+        "id": "1B081",
+        "name": "WCD",
+        "label": "1B081 WCD",
+        "room_type": "WCD",
+        "area_m2": 3.97,
+        "center_m": {"x": 60.0, "y": 11.0}
+      },
+      {
+        "id": "1B082",
+        "name": "WC IV",
+        "label": "1B082 WC IV",
+        "room_type": "WC IV",
+        "area_m2": 26.27,
+        "center_m": {"x": 58.0, "y": 11.0}
+      },
+      {
+        "id": "1B083",
+        "name": "WC H",
+        "label": "1B083 WC H",
+        "room_type": "WC H",
+        "area_m2": 9.47,
+        "center_m": {"x": 56.0, "y": 11.0}
+      },
+      {
+        "id": "1B091",
+        "name": "Vorraum",
+        "label": "1B091 Vorraum",
+        "room_type": "Vorraum",
+        "area_m2": 15.97,
+        "center_m": {"x": 80.0, "y": 11.0}
+      },
+      {
+        "id": "1B141",
+        "name": "Putzraum",
+        "label": "1B141 Putzraum",
+        "room_type": "Putzraum",
+        "area_m2": 11.53,
+        "center_m": {"x": 50.0, "y": 11.0}
+      },
+      {
+        "id": "1B142",
+        "name": "Sitzung",
+        "label": "1B142 Sitzung",
+        "room_type": "Sitzung",
+        "area_m2": 11.43,
+        "center_m": {"x": 48.0, "y": 12.0}
+      },
+      {
+        "id": "1B143",
+        "name": "Sitzung",
+        "label": "1B143 Sitzung",
+        "room_type": "Sitzung",
+        "area_m2": 38.90,
+        "center_m": {"x": 46.0, "y": 12.0}
+      },
+      {
+        "id": "1B151",
+        "name": "Teeküche",
+        "label": "1B151 Teeküche",
+        "room_type": "Teeküche",
+        "area_m2": 18.43,
+        "center_m": {"x": 40.0, "y": 12.0}
+      },
+      {
+        "id": "1B161",
+        "name": "WCD",
+        "label": "1B161 WCD",
+        "room_type": "WCD",
+        "area_m2": 3.96,
+        "center_m": {"x": 38.0, "y": 11.0}
+      },
+      {
+        "id": "1B162",
+        "name": "WC IV",
+        "label": "1B162 WC IV",
+        "room_type": "WC IV",
+        "area_m2": 9.53,
+        "center_m": {"x": 36.0, "y": 11.0}
+      },
+      {
+        "id": "1B163",
+        "name": "WCH",
+        "label": "1B163 WCH",
+        "room_type": "WCH",
+        "area_m2": 9.04,
+        "center_m": {"x": 34.0, "y": 11.0}
+      },
+      {
+        "id": "1B171",
+        "name": "Vorraum",
+        "label": "1B171 Vorraum",
+        "room_type": "Vorraum",
+        "area_m2": 15.93,
+        "center_m": {"x": 42.0, "y": 11.0}
+      },
+      {
+        "id": "1B211",
+        "name": "Co-Working",
+        "label": "1B211 Co-Working",
+        "room_type": "Co-Working",
+        "area_m2": 39.48,
+        "center_m": {"x": 30.0, "y": 12.0}
+      },
+      {
+        "id": "1B251",
+        "name": "Besprechung",
+        "label": "1B251 Besprechung",
+        "room_type": "Besprechung",
+        "area_m2": 18.43,
+        "center_m": {"x": 25.0, "y": 12.0}
+      },
+      {
+        "id": "1B252",
+        "name": "Rackraum",
+        "label": "1B252 Rackraum",
+        "room_type": "Rackraum",
+        "area_m2": 8.82,
+        "center_m": {"x": 23.0, "y": 11.0}
+      },
+      {
+        "id": "1B253",
+        "name": "Archiv",
+        "label": "1B253 Archiv",
+        "room_type": "Archiv",
+        "area_m2": 9.26,
+        "center_m": {"x": 21.0, "y": 11.0}
+      },
+      {
+        "id": "1B281",
+        "name": "Korridor",
+        "label": "1B281 Korridor",
+        "room_type": "Korridor",
+        "area_m2": 8.82,
+        "center_m": {"x": 15.0, "y": 12.0}
+      },
+      {
+        "id": "1B291",
+        "name": "Gard. DHSCL",
+        "label": "1B291 Gard. DHSCL",
+        "room_type": "Gard. DHSCL",
+        "area_m2": 9.06,
+        "center_m": {"x": 25.0, "y": 17.0}
+      },
+      {
+        "id": "1B292",
+        "name": "Gard. HHSCL",
+        "label": "1B292 Gard. HHSCL",
+        "room_type": "Gard. HHSCL",
+        "area_m2": 9.06,
+        "center_m": {"x": 27.0, "y": 17.0}
+      },
+      {
+        "id": "1B293",
+        "name": "WC D/H Büro",
+        "label": "1B293 WC D/H Büro",
+        "room_type": "WC D/H Büro",
+        "area_m2": 7.17,
+        "center_m": {"x": 29.0, "y": 17.0}
+      },
+      {
+        "id": "1B301",
+        "name": "Teeküche",
+        "label": "1B301 Teeküche",
+        "room_type": "Teeküche",
+        "area_m2": 144.29,
+        "center_m": {"x": 35.0, "y": 17.0}
+      },
+      {
+        "id": "1C011",
+        "name": "Grossraumbüro",
+        "label": "1C011 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 12.98,
+        "center_m": {"x": 140.0, "y": 8.0}
+      },
+      {
+        "id": "1C041",
+        "name": "Sitzung",
+        "label": "1C041 Sitzung",
+        "room_type": "Sitzung",
+        "area_m2": 206.62,
+        "center_m": {"x": 120.0, "y": 8.0}
+      },
+      {
+        "id": "1C051",
+        "name": "Grossraumbüro",
+        "label": "1C051 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 6.43,
+        "center_m": {"x": 110.0, "y": 8.0}
+      },
+      {
+        "id": "1C101",
+        "name": "Rückzug",
+        "label": "1C101 Rückzug",
+        "room_type": "Rückzug",
+        "area_m2": 19.92,
+        "center_m": {"x": 100.0, "y": 8.0}
+      },
+      {
+        "id": "1C102",
+        "name": "Rückzug",
+        "label": "1C102 Rückzug",
+        "room_type": "Rückzug",
+        "area_m2": 6.15,
+        "center_m": {"x": 98.0, "y": 8.0}
+      },
+      {
+        "id": "1C103",
+        "name": "Sitzung",
+        "label": "1C103 Sitzung",
+        "room_type": "Sitzung",
+        "area_m2": 41.41,
+        "center_m": {"x": 96.0, "y": 8.0}
+      },
+      {
+        "id": "1C111",
+        "name": "Korridor",
+        "label": "1C111 Korridor",
+        "room_type": "Korridor",
+        "area_m2": 12.98,
+        "center_m": {"x": 90.0, "y": 8.0}
+      },
+      {
+        "id": "1C112",
+        "name": "Büro Hausdienst",
+        "label": "1C112 Büro Hausdienst",
+        "room_type": "Büro Hausdienst",
+        "area_m2": 40.46,
+        "center_m": {"x": 85.0, "y": 8.0}
+      },
+      {
+        "id": "1C121",
+        "name": "Büro/Sitzung",
+        "label": "1C121 Büro/Sitzung",
+        "room_type": "Büro/Sitzung",
+        "area_m2": 12.98,
+        "center_m": {"x": 75.0, "y": 8.0}
+      },
+      {
+        "id": "1C131",
+        "name": "Grossraumbüro",
+        "label": "1C131 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 70.47,
+        "center_m": {"x": 65.0, "y": 8.0}
+      },
+      {
+        "id": "1C151",
+        "name": "Aufenthalt",
+        "label": "1C151 Aufenthalt",
+        "room_type": "Aufenthalt",
+        "area_m2": 60.46,
+        "center_m": {"x": 50.0, "y": 8.0}
+      },
+      {
+        "id": "1C161",
+        "name": "Grossraumbüro",
+        "label": "1C161 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 86.33,
+        "center_m": {"x": 40.0, "y": 8.0}
+      },
+      {
+        "id": "1C181",
+        "name": "Büro/Sitzung",
+        "label": "1C181 Büro/Sitzung",
+        "room_type": "Büro/Sitzung",
+        "area_m2": 12.98,
+        "center_m": {"x": 140.0, "y": 5.0}
+      },
+      {
+        "id": "1C182",
+        "name": "Sitzung",
+        "label": "1C182 Sitzung",
+        "room_type": "Sitzung",
+        "area_m2": 20.05,
+        "center_m": {"x": 138.0, "y": 5.0}
+      },
+      {
+        "id": "1C191",
+        "name": "Sitzung",
+        "label": "1C191 Sitzung",
+        "room_type": "Sitzung",
+        "area_m2": 20.05,
+        "center_m": {"x": 136.0, "y": 5.0}
+      },
+      {
+        "id": "1C201",
+        "name": "Rückzug",
+        "label": "1C201 Rückzug",
+        "room_type": "Rückzug",
+        "area_m2": 6.43,
+        "center_m": {"x": 134.0, "y": 5.0}
+      },
+      {
+        "id": "1C202",
+        "name": "Rückzug",
+        "label": "1C202 Rückzug",
+        "room_type": "Rückzug",
+        "area_m2": 6.15,
+        "center_m": {"x": 132.0, "y": 5.0}
+      },
+      {
+        "id": "1C203",
+        "name": "Grossraumbüro",
+        "label": "1C203 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 29.57,
+        "center_m": {"x": 130.0, "y": 5.0}
+      },
+      {
+        "id": "1C251",
+        "name": "BüroLehrpersonenHSCL",
+        "label": "1C251 BüroLehrpersonenHSCL",
+        "room_type": "BüroLehrpersonenHSCL",
+        "area_m2": 38.07,
+        "center_m": {"x": 120.0, "y": 5.0}
+      },
+      {
+        "id": "1C261",
+        "name": "Korridor",
+        "label": "1C261 Korridor",
+        "room_type": "Korridor",
+        "area_m2": 19.94,
+        "center_m": {"x": 110.0, "y": 5.0}
+      },
+      {
+        "id": "1C262",
+        "name": "BüroLeitungHSCL",
+        "label": "1C262 BüroLeitungHSCL",
+        "room_type": "BüroLeitungHSCL",
+        "area_m2": 19.94,
+        "center_m": {"x": 105.0, "y": 5.0}
+      },
+      {
+        "id": "1C271",
+        "name": "BesprechungHSCL",
+        "label": "1C271 BesprechungHSCL",
+        "room_type": "BesprechungHSCL",
+        "area_m2": 12.98,
+        "center_m": {"x": 100.0, "y": 5.0}
+      },
+      {
+        "id": "1C272",
+        "name": "Besprechung",
+        "label": "1C272 Besprechung",
+        "room_type": "Besprechung",
+        "area_m2": 12.98,
+        "center_m": {"x": 95.0, "y": 5.0}
+      },
+      {
+        "id": "1C281",
+        "name": "BüroHSLU",
+        "label": "1C281 BüroHSLU",
+        "room_type": "BüroHSLU",
+        "area_m2": 49.60,
+        "center_m": {"x": 85.0, "y": 5.0}
+      },
+      {
+        "id": "1C282",
+        "name": "Beratungsstelle",
+        "label": "1C282 Beratungsstelle",
+        "room_type": "Beratungsstelle",
+        "area_m2": 19.91,
+        "center_m": {"x": 80.0, "y": 5.0}
+      },
+      {
+        "id": "1C283",
+        "name": "Besprechung",
+        "label": "1C283 Besprechung",
+        "room_type": "Besprechung",
+        "area_m2": 12.98,
+        "center_m": {"x": 75.0, "y": 5.0}
+      },
+      {
+        "id": "1D140",
+        "name": "Grossraumbüro",
+        "label": "1D140 Grossraumbüro",
+        "room_type": "Grossraumbüro",
+        "area_m2": 85.05,
+        "center_m": {"x": 145.0, "y": 2.0}
+      },
+      {
+        "id": "1D141",
+        "name": "BüroLehrpersonenHSCL",
+        "label": "1D141 BüroLehrpersonenHSCL",
+        "room_type": "BüroLehrpersonenHSCL",
+        "area_m2": 26.04,
+        "center_m": {"x": 140.0, "y": 2.0}
+      },
+      {
+        "id": "1D142",
+        "name": "Massage/Therapie",
+        "label": "1D142 Massage/Therapie",
+        "room_type": "Massage/Therapie",
+        "area_m2": 29.57,
+        "center_m": {"x": 135.0, "y": 2.0}
+      },
+      {
+        "id": "1D143",
+        "name": "BüroLeitungHSCL",
+        "label": "1D143 BüroLeitungHSCL",
+        "room_type": "BüroLeitungHSCL",
+        "area_m2": 25.98,
+        "center_m": {"x": 130.0, "y": 2.0}
+      },
+      {
+        "id": "1D144",
+        "name": "Aufenthalt",
+        "label": "1D144 Aufenthalt",
+        "room_type": "Aufenthalt",
+        "area_m2": 33.81,
+        "center_m": {"x": 125.0, "y": 2.0}
+      },
+      {
+        "id": "1D145",
+        "name": "BesprechungHSCL",
+        "label": "1D145 BesprechungHSCL",
+        "room_type": "BesprechungHSCL",
+        "area_m2": 12.98,
+        "center_m": {"x": 120.0, "y": 2.0}
+      },
+      {
+        "id": "1D147",
+        "name": "Besprechung",
+        "label": "1D147 Besprechung",
+        "room_type": "Besprechung",
+        "area_m2": 12.98,
+        "center_m": {"x": 115.0, "y": 2.0}
+      },
+      {
+        "id": "1D149",
+        "name": "Besprechung",
+        "label": "1D149 Besprechung",
+        "room_type": "Besprechung",
+        "area_m2": 12.98,
+        "center_m": {"x": 110.0, "y": 2.0}
+      },
+      {
+        "id": "1D151",
+        "name": "Beratungsstelle",
+        "label": "1D151 Beratungsstelle",
+        "room_type": "Beratungsstelle",
+        "area_m2": 19.91,
+        "center_m": {"x": 105.0, "y": 2.0}
+      },
+      {
+        "id": "1D153",
+        "name": "BüroHSLU",
+        "label": "1D153 BüroHSLU",
+        "room_type": "BüroHSLU",
+        "area_m2": 49.60,
+        "center_m": {"x": 100.0, "y": 2.0}
+      },
+      {
+        "id": "1K031",
+        "name": "EL.",
+        "label": "1K031 EL.",
+        "room_type": "EL.",
+        "area_m2": 23.19,
+        "center_m": {"x": 148.0, "y": 10.0}
+      },
+      {
+        "id": "1K032",
+        "name": "VorraumElektro",
+        "label": "1K032 VorraumElektro",
+        "room_type": "VorraumElektro",
+        "area_m2": 68.86,
+        "center_m": {"x": 146.0, "y": 10.0}
+      },
+      {
+        "id": "1K041",
+        "name": "Vorraum/Treppe",
+        "label": "1K041 Vorraum/Treppe",
+        "room_type": "Vorraum/Treppe",
+        "area_m2": 24.20,
+        "center_m": {"x": 130.0, "y": 10.0}
+      },
+      {
+        "id": "1K042",
+        "name": "VorraumLift",
+        "label": "1K042 VorraumLift",
+        "room_type": "VorraumLift",
+        "area_m2": 15.91,
+        "center_m": {"x": 128.0, "y": 10.0}
+      },
+      {
+        "id": "1K051",
+        "name": "Lift 1",
+        "label": "1K051 Lift 1",
+        "room_type": "Lift 1",
+        "area_m2": null,
+        "center_m": {"x": 125.0, "y": 10.0}
+      },
+      {
+        "id": "1K052",
+        "name": "Lift 2",
+        "label": "1K052 Lift 2",
+        "room_type": "Lift 2",
+        "area_m2": null,
+        "center_m": {"x": 123.0, "y": 10.0}
+      },
+      {
+        "id": "1K053",
+        "name": "Lift 3",
+        "label": "1K053 Lift 3",
+        "room_type": "Lift 3",
+        "area_m2": null,
+        "center_m": {"x": 121.0, "y": 10.0}
+      },
+      {
+        "id": "1K102",
+        "name": "EL.",
+        "label": "1K102 EL.",
+        "room_type": "EL.",
+        "area_m2": 23.19,
+        "center_m": {"x": 93.0, "y": 10.0}
+      },
+      {
+        "id": "1K111",
+        "name": "VorraumElektro",
+        "label": "1K111 VorraumElektro",
+        "room_type": "VorraumElektro",
+        "area_m2": 23.85,
+        "center_m": {"x": 91.0, "y": 10.0}
+      },
+      {
+        "id": "1K121",
+        "name": "Vorraum/Treppe",
+        "label": "1K121 Vorraum/Treppe",
+        "room_type": "Vorraum/Treppe",
+        "area_m2": 15.91,
+        "center_m": {"x": 80.0, "y": 10.0}
+      },
+      {
+        "id": "1K122",
+        "name": "VorraumLift",
+        "label": "1K122 VorraumLift",
+        "room_type": "VorraumLift",
+        "area_m2": 68.65,
+        "center_m": {"x": 78.0, "y": 10.0}
+      },
+      {
+        "id": "1K131",
+        "name": "Lift 2",
+        "label": "1K131 Lift 2",
+        "room_type": "Lift 2",
+        "area_m2": null,
+        "center_m": {"x": 76.0, "y": 10.0}
+      },
+      {
+        "id": "1K132",
+        "name": "Lift 1",
+        "label": "1K132 Lift 1",
+        "room_type": "Lift 1",
+        "area_m2": null,
+        "center_m": {"x": 74.0, "y": 10.0}
+      },
+      {
+        "id": "1K182",
+        "name": "VorraumElektro",
+        "label": "1K182 VorraumElektro",
+        "room_type": "VorraumElektro",
+        "area_m2": 24.20,
+        "center_m": {"x": 36.0, "y": 10.0}
+      },
+      {
+        "id": "1K191",
+        "name": "Vorraum/Treppe",
+        "label": "1K191 Vorraum/Treppe",
+        "room_type": "Vorraum/Treppe",
+        "area_m2": 15.91,
+        "center_m": {"x": 25.0, "y": 10.0}
+      },
+      {
+        "id": "1K192",
+        "name": "VorraumLift",
+        "label": "1K192 VorraumLift",
+        "room_type": "VorraumLift",
+        "area_m2": 68.87,
+        "center_m": {"x": 23.0, "y": 10.0}
+      },
+      {
+        "id": "1K201",
+        "name": "Lift 2",
+        "label": "1K201 Lift 2",
+        "room_type": "Lift 2",
+        "area_m2": null,
+        "center_m": {"x": 20.0, "y": 10.0}
+      },
+      {
+        "id": "1K202",
+        "name": "Lift 1",
+        "label": "1K202 Lift 1",
+        "room_type": "Lift 1",
+        "area_m2": null,
+        "center_m": {"x": 18.0, "y": 10.0}
+      },
+      {
+        "id": "1K203",
+        "name": "Lift 3",
+        "label": "1K203 Lift 3",
+        "room_type": "Lift 3",
+        "area_m2": null,
+        "center_m": {"x": 16.0, "y": 10.0}
+      }
+    ],
+    "edges": [
+      {"source": "1A011", "target": "1A021", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 16.5, "notes": ["main_wing_connection"]},
+      {"source": "1A021", "target": "1A022", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 4.0, "notes": ["room_adjacency"]},
+      {"source": "1A022", "target": "1A023", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 3.0, "notes": ["room_adjacency"]},
+      {"source": "1A023", "target": "1A031", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["wing_transition"]},
+      {"source": "1A031", "target": "1A071", "bidirectional": true, "connection_type": "open", "door_ids": [], "distance_m": 10.0, "notes": ["open_space"]},
+      {"source": "1A071", "target": "1A081", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["wing_continuation"]},
+      {"source": "1A081", "target": "1A091", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["room_adjacency"]},
+      {"source": "1A091", "target": "1A102", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["wing_transition"]},
+      {"source": "1A102", "target": "1A131", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["open_space"]},
+      {"source": "1A131", "target": "1A141", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["wing_continuation"]},
+      {"source": "1A171", "target": "1A181", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 20.0, "notes": ["upper_corridor"]},
+      {"source": "1A181", "target": "1A251", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 50.0, "notes": ["long_corridor"]},
+      {"source": "1A261", "target": "1A262", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 3.0, "notes": ["service_area"]},
+      {"source": "1A262", "target": "1A264", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 7.0, "notes": ["service_area"]},
+      {"source": "1A264", "target": "1A281", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["wc_cluster"]},
+      {"source": "1A281", "target": "1A282", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["wc_cluster"]},
+      {"source": "1A282", "target": "1A283", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["wc_cluster"]},
+      {"source": "1A283", "target": "1A263", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.5, "notes": ["corridor_connection"]},
+      {"source": "1A291", "target": "1A292", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["room_adjacency"]},
+      {"source": "1B011", "target": "1B021", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["wing_connection"]},
+      {"source": "1B021", "target": "1B022", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["room_adjacency"]},
+      {"source": "1B022", "target": "1B061", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 15.0, "notes": ["corridor_access"]},
+      {"source": "1B061", "target": "1B071", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["service_room"]},
+      {"source": "1B071", "target": "1B072", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["adjacent_service"]},
+      {"source": "1B072", "target": "1B073", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 3.0, "notes": ["service_area"]},
+      {"source": "1B073", "target": "1B081", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["wc_cluster"]},
+      {"source": "1B081", "target": "1B082", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["wc_cluster"]},
+      {"source": "1B082", "target": "1B083", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["wc_cluster"]},
+      {"source": "1B083", "target": "1B091", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 8.0, "notes": ["corridor_connection"]},
+      {"source": "1B091", "target": "1B141", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 30.0, "notes": ["corridor_path"]},
+      {"source": "1B141", "target": "1B142", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["room_adjacency"]},
+      {"source": "1B142", "target": "1B143", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["room_adjacency"]},
+      {"source": "1B143", "target": "1B151", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 6.0, "notes": ["service_room"]},
+      {"source": "1B151", "target": "1B161", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["wc_cluster"]},
+      {"source": "1B161", "target": "1B162", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["wc_cluster"]},
+      {"source": "1B162", "target": "1B163", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["wc_cluster"]},
+      {"source": "1B163", "target": "1B171", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 8.0, "notes": ["corridor_connection"]},
+      {"source": "1B171", "target": "1B211", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 12.0, "notes": ["wing_transition"]},
+      {"source": "1B211", "target": "1B251", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["room_adjacency"]},
+      {"source": "1B251", "target": "1B252", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["service_room"]},
+      {"source": "1B252", "target": "1B253", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["service_room"]},
+      {"source": "1B253", "target": "1B281", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 8.0, "notes": ["corridor_connection"]},
+      {"source": "1B291", "target": "1B292", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["wc_cluster"]},
+      {"source": "1B292", "target": "1B293", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["wc_cluster"]},
+      {"source": "1B293", "target": "1B301", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 6.0, "notes": ["tea_kitchen"]},
+      {"source": "1C011", "target": "1C041", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 20.0, "notes": ["wing_connection"]},
+      {"source": "1C041", "target": "1C051", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["room_adjacency"]},
+      {"source": "1C051", "target": "1C101", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["wing_continuation"]},
+      {"source": "1C101", "target": "1C102", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["room_adjacency"]},
+      {"source": "1C102", "target": "1C103", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["room_adjacency"]},
+      {"source": "1C103", "target": "1C111", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 6.0, "notes": ["corridor_connection"]},
+      {"source": "1C111", "target": "1C112", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["room_adjacency"]},
+      {"source": "1C112", "target": "1C121", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["wing_continuation"]},
+      {"source": "1C121", "target": "1C131", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["wing_continuation"]},
+      {"source": "1C131", "target": "1C151", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 15.0, "notes": ["wing_continuation"]},
+      {"source": "1C151", "target": "1C161", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["wing_continuation"]},
+      {"source": "1C181", "target": "1C182", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["room_adjacency"]},
+      {"source": "1C182", "target": "1C191", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["room_adjacency"]},
+      {"source": "1C191", "target": "1C201", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["room_adjacency"]},
+      {"source": "1C201", "target": "1C202", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["room_adjacency"]},
+      {"source": "1C202", "target": "1C203", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["room_adjacency"]},
+      {"source": "1C203", "target": "1C251", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["corridor_path"]},
+      {"source": "1C251", "target": "1C261", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["corridor_connection"]},
+      {"source": "1C261", "target": "1C262", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["room_adjacency"]},
+      {"source": "1C262", "target": "1C271", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["room_adjacency"]},
+      {"source": "1C271", "target": "1C272", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["room_adjacency"]},
+      {"source": "1C272", "target": "1C281", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["corridor_path"]},
+      {"source": "1C281", "target": "1C282", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["room_adjacency"]},
+      {"source": "1C282", "target": "1C283", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["room_adjacency"]},
+      {"source": "1D140", "target": "1D141", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["hscl_zone"]},
+      {"source": "1D141", "target": "1D142", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["hscl_zone"]},
+      {"source": "1D142", "target": "1D143", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["hscl_zone"]},
+      {"source": "1D143", "target": "1D144", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["hscl_zone"]},
+      {"source": "1D144", "target": "1D145", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["hscl_zone"]},
+      {"source": "1D145", "target": "1D147", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["hscl_zone"]},
+      {"source": "1D147", "target": "1D149", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["hscl_zone"]},
+      {"source": "1D149", "target": "1D151", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["hscl_zone"]},
+      {"source": "1D151", "target": "1D153", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 5.0, "notes": ["hscl_zone"]},
+      {"source": "1K051", "target": "1K052", "bidirectional": true, "connection_type": "open", "door_ids": [], "distance_m": 2.0, "notes": ["lift_lobby"]},
+      {"source": "1K052", "target": "1K053", "bidirectional": true, "connection_type": "open", "door_ids": [], "distance_m": 2.0, "notes": ["lift_lobby"]},
+      {"source": "1K131", "target": "1K132", "bidirectional": true, "connection_type": "open", "door_ids": [], "distance_m": 2.0, "notes": ["lift_lobby"]},
+      {"source": "1K201", "target": "1K202", "bidirectional": true, "connection_type": "open", "door_ids": [], "distance_m": 2.0, "notes": ["lift_lobby"]},
+      {"source": "1K202", "target": "1K203", "bidirectional": true, "connection_type": "open", "door_ids": [], "distance_m": 2.0, "notes": ["lift_lobby"]},
+      {"source": "1K042", "target": "1K051", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 3.0, "notes": ["core_access"]},
+      {"source": "1K122", "target": "1K131", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 2.0, "notes": ["core_access"]},
+      {"source": "1K192", "target": "1K201", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 3.0, "notes": ["core_access"]},
+      {"source": "1A263", "target": "1K042", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 8.0, "notes": ["corridor_to_core"]},
+      {"source": "1B061", "target": "1K122", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 8.0, "notes": ["corridor_to_core"]},
+      {"source": "1C111", "target": "1K121", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 10.0, "notes": ["corridor_to_core"]},
+      {"source": "1C261", "target": "1K191", "bidirectional": true, "connection_type": "door", "door_ids": [], "distance_m": 85.0, "notes": ["long_corridor_to_core"]}
+    ],
+    "excluded_nodes": {
+      "reason": "Technikschacht omitted per planning guidelines",
+      "ids": [
+        "1K021",
+        "1K061",
+        "1K101",
+        "1K133",
+        "1K171",
+        "1K181",
+        "1K211"
+      ]
+    }
+  }
+}

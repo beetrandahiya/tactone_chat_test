@@ -1,0 +1,2919 @@
+{
+  "graph": {
+    "id": "HSLU_FloorA03_v6",
+    "directed": true,
+    "graph_attrs": {
+      "rankdir": "LR",
+      "nodesep": 0.6,
+      "ranksep": 1.0
+    },
+    "coordinate_system": {
+      "origin": "bottom_left_page",
+      "units": "m",
+      "scale_m_per_pdf_point": 0.03527777777777778,
+      "page_size_pdf_points": {
+        "width": 6095.0,
+        "height": 1190.0
+      }
+    },
+    "defaults": {
+      "node": {
+        "shape": "box",
+        "style": "filled,rounded",
+        "fontname": "Arial",
+        "fontsize": 9
+      },
+      "edge": {
+        "fontname": "Arial",
+        "fontsize": 7
+      }
+    },
+    "nodes": [
+      {
+        "id": "3A011",
+        "label_raw": "3A011 - Lesesaal",
+        "room_type": "Lesesaal",
+        "area_m2": 127.62,
+        "center_m": {
+          "x": 170.919,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#90EE90"
+        }
+      },
+      {
+        "id": "3A051",
+        "label_raw": "3A051 - Empfang/Buero",
+        "room_type": "Empfang/Buero",
+        "area_m2": 101.8,
+        "center_m": {
+          "x": 148.124,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFFFFF"
+        }
+      },
+      {
+        "id": "3A071",
+        "label_raw": "3A071 - Arbeitsplaetze",
+        "room_type": "Arbeitsplaetze",
+        "area_m2": 45.62,
+        "center_m": {
+          "x": 136.124,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFFFFF"
+        }
+      },
+      {
+        "id": "3A072",
+        "label_raw": "3A072 - Vorraum/Korridor",
+        "room_type": "Vorraum/Korridor",
+        "area_m2": 43.8,
+        "center_m": {
+          "x": 136.124,
+          "y": 28.733
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3A091",
+        "label_raw": "3A091 - Empfang/Buero",
+        "room_type": "Empfang/Buero",
+        "area_m2": 88.91,
+        "center_m": {
+          "x": 125.624,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFFFFF"
+        }
+      },
+      {
+        "id": "3A131",
+        "label_raw": "3A131 - Lernwelt",
+        "room_type": "Lernwelt",
+        "area_m2": 282.69,
+        "center_m": {
+          "x": 80.624,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#90EE90"
+        }
+      },
+      {
+        "id": "3A201",
+        "label_raw": "3A201 - Lernwelt | Fachlounge",
+        "room_type": "Lernwelt | Fachlounge",
+        "area_m2": 192.37,
+        "center_m": {
+          "x": 46.124,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#90EE90"
+        }
+      },
+      {
+        "id": "3A241",
+        "label_raw": "3A241 (D316) - Atelier",
+        "room_type": "Atelier",
+        "area_m2": 37.08,
+        "center_m": {
+          "x": 40.272,
+          "y": 36.178
+        },
+        "aliases": [
+          "D316"
+        ],
+        "style": {
+          "fillcolor": "#98FB98"
+        }
+      },
+      {
+        "id": "3A242",
+        "label_raw": "3A242 - Korridor",
+        "room_type": "Korridor",
+        "area_m2": 52.64,
+        "center_m": {
+          "x": 34.401,
+          "y": 26.688
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3A251",
+        "label_raw": "3A251 - Atelier",
+        "room_type": "Atelier",
+        "area_m2": 37.04,
+        "center_m": {
+          "x": 34.124,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#98FB98"
+        }
+      },
+      {
+        "id": "3A261",
+        "label_raw": "3A261 (D317) - Atelier",
+        "room_type": "Atelier",
+        "area_m2": 37.08,
+        "center_m": {
+          "x": 28.124,
+          "y": 32.373
+        },
+        "aliases": [
+          "D317"
+        ],
+        "style": {
+          "fillcolor": "#98FB98"
+        }
+      },
+      {
+        "id": "3A271",
+        "label_raw": "3A271 (D318) - Atelier",
+        "room_type": "Atelier",
+        "area_m2": 37.08,
+        "center_m": {
+          "x": 22.124,
+          "y": 32.373
+        },
+        "aliases": [
+          "D318"
+        ],
+        "style": {
+          "fillcolor": "#98FB98"
+        }
+      },
+      {
+        "id": "3A281",
+        "label_raw": "3A281 - Lernwelt",
+        "room_type": "Lernwelt",
+        "area_m2": 114.19,
+        "center_m": {
+          "x": 9.724,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#90EE90"
+        }
+      },
+      {
+        "id": "3B011",
+        "label_raw": "3B011 - Bibliothek",
+        "room_type": "Bibliothek",
+        "area_m2": 381.52,
+        "center_m": {
+          "x": 178.369,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#90EE90"
+        }
+      },
+      {
+        "id": "3B061",
+        "label_raw": "3B061 - Vorraum",
+        "room_type": "Vorraum",
+        "area_m2": 52.2,
+        "center_m": {
+          "x": 145.478,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3B081",
+        "label_raw": "3B081 - Vorraum/Teekueche",
+        "room_type": "Vorraum/Teekueche",
+        "area_m2": 34.42,
+        "center_m": {
+          "x": 140.451,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3B082",
+        "label_raw": "3B082 - WC IV",
+        "room_type": "WC IV",
+        "area_m2": 3.96,
+        "center_m": {
+          "x": 138.268,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFC0CB"
+        }
+      },
+      {
+        "id": "3B091",
+        "label_raw": "3B091 - Inklusions-WC",
+        "room_type": "Inklusions-WC",
+        "area_m2": 42.41,
+        "center_m": {
+          "x": 133.812,
+          "y": 22.131
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFC0CB"
+        }
+      },
+      {
+        "id": "3B141",
+        "label_raw": "3B141 - Lager",
+        "room_type": "Lager",
+        "area_m2": 43.51,
+        "center_m": {
+          "x": 104.511,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFFFFF"
+        }
+      },
+      {
+        "id": "3B151",
+        "label_raw": "3B151 - Vorraum/Teekueche",
+        "room_type": "Vorraum/Teekueche",
+        "area_m2": 33.52,
+        "center_m": {
+          "x": 95.451,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3B161",
+        "label_raw": "3B161 - WC H",
+        "room_type": "WC H",
+        "area_m2": 18.94,
+        "center_m": {
+          "x": 90.446,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFC0CB"
+        }
+      },
+      {
+        "id": "3B162",
+        "label_raw": "3B162 - WC IV",
+        "room_type": "WC IV",
+        "area_m2": 3.96,
+        "center_m": {
+          "x": 91.629,
+          "y": 22.268
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFC0CB"
+        }
+      },
+      {
+        "id": "3B163",
+        "label_raw": "3B163 - WC D",
+        "room_type": "WC D",
+        "area_m2": 23.35,
+        "center_m": {
+          "x": 91.909,
+          "y": 19.768
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFC0CB"
+        }
+      },
+      {
+        "id": "3B211",
+        "label_raw": "3B211 - Vorraum",
+        "room_type": "Vorraum",
+        "area_m2": 23.99,
+        "center_m": {
+          "x": 59.447,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3B221",
+        "label_raw": "3B221 - Putzraum",
+        "room_type": "Putzraum",
+        "area_m2": 11.6,
+        "center_m": {
+          "x": 55.324,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFFFFF"
+        }
+      },
+      {
+        "id": "3B222",
+        "label_raw": "3B222 - Lager",
+        "room_type": "Lager",
+        "area_m2": 41.29,
+        "center_m": {
+          "x": 50.774,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFFFFF"
+        }
+      },
+      {
+        "id": "3B231",
+        "label_raw": "3B231 - WC D",
+        "room_type": "WC D",
+        "area_m2": 20.69,
+        "center_m": {
+          "x": 43.596,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFC0CB"
+        }
+      },
+      {
+        "id": "3B232",
+        "label_raw": "3B232 - WC H",
+        "room_type": "WC H",
+        "area_m2": 16.08,
+        "center_m": {
+          "x": 43.491,
+          "y": 19.717
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFC0CB"
+        }
+      },
+      {
+        "id": "3B241",
+        "label_raw": "3B241 - WC IV",
+        "room_type": "WC IV",
+        "area_m2": 3.96,
+        "center_m": {
+          "x": 44.407,
+          "y": 22.266
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFC0CB"
+        }
+      },
+      {
+        "id": "3B242",
+        "label_raw": "3B242 - Vorraum/Teekueche",
+        "room_type": "Vorraum/Teekueche",
+        "area_m2": 33.34,
+        "center_m": {
+          "x": 39.124,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3B251",
+        "label_raw": "3B251 - Lager",
+        "room_type": "Lager",
+        "area_m2": 12.28,
+        "center_m": {
+          "x": 35.799,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFFFFF"
+        }
+      },
+      {
+        "id": "3B291",
+        "label_raw": "3B291 - Vorraum",
+        "room_type": "Vorraum",
+        "area_m2": 13.13,
+        "center_m": {
+          "x": 15.695,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3B292",
+        "label_raw": "3B292 (D319) - Gruppenarbeit",
+        "room_type": "Gruppenarbeit",
+        "area_m2": 43.39,
+        "center_m": {
+          "x": 9.009,
+          "y": 24.128
+        },
+        "aliases": [
+          "D319"
+        ],
+        "style": {
+          "fillcolor": "#90EE90"
+        }
+      },
+      {
+        "id": "3C071",
+        "label_raw": "3C071 - Fam.-/Sanitaetszimmer",
+        "room_type": "Fam.-/Sanitaetszimmer",
+        "area_m2": 18.4,
+        "center_m": {
+          "x": 143.801,
+          "y": 17.418
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#90EE90"
+        }
+      },
+      {
+        "id": "3C072",
+        "label_raw": "3C072 - Rueckzug",
+        "room_type": "Rueckzug",
+        "area_m2": 18.64,
+        "center_m": {
+          "x": 143.801,
+          "y": 13.483
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#90EE90"
+        }
+      },
+      {
+        "id": "3C081",
+        "label_raw": "3C081 (A305) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 76.25,
+        "center_m": {
+          "x": 139.123,
+          "y": 17.418
+        },
+        "aliases": [
+          "A305"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C091",
+        "label_raw": "3C091 (B306) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 88.88,
+        "center_m": {
+          "x": 125.624,
+          "y": 17.418
+        },
+        "aliases": [
+          "B306"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C111",
+        "label_raw": "3C111 (B307) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 75.98,
+        "center_m": {
+          "x": 116.615,
+          "y": 17.418
+        },
+        "aliases": [
+          "B307"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C121",
+        "label_raw": "3C121 (B308) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 102.07,
+        "center_m": {
+          "x": 104.624,
+          "y": 17.418
+        },
+        "aliases": [
+          "B308"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C141",
+        "label_raw": "3C141 (B309) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 102.35,
+        "center_m": {
+          "x": 94.314,
+          "y": 17.418
+        },
+        "aliases": [
+          "B309"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C161",
+        "label_raw": "3C161 (C310) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 101.87,
+        "center_m": {
+          "x": 79.301,
+          "y": 17.418
+        },
+        "aliases": [
+          "C310"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C181",
+        "label_raw": "3C181 (C311) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 75.98,
+        "center_m": {
+          "x": 70.301,
+          "y": 17.418
+        },
+        "aliases": [
+          "C311"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C201",
+        "label_raw": "3C201 (C312) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 76.01,
+        "center_m": {
+          "x": 61.313,
+          "y": 17.418
+        },
+        "aliases": [
+          "C312"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C211",
+        "label_raw": "3C211 (D313) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 89.43,
+        "center_m": {
+          "x": 50.769,
+          "y": 17.418
+        },
+        "aliases": [
+          "D313"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C231",
+        "label_raw": "3C231 (D314) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 89.43,
+        "center_m": {
+          "x": 41.634,
+          "y": 17.418
+        },
+        "aliases": [
+          "D314"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C251",
+        "label_raw": "3C251 (D315) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 88.97,
+        "center_m": {
+          "x": 29.801,
+          "y": 17.418
+        },
+        "aliases": [
+          "D315"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C271",
+        "label_raw": "3C271 (D321) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 88.86,
+        "center_m": {
+          "x": 19.301,
+          "y": 17.418
+        },
+        "aliases": [
+          "D321"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3C281",
+        "label_raw": "3C281 (D320) - Unterricht",
+        "room_type": "Unterricht",
+        "area_m2": 88.25,
+        "center_m": {
+          "x": 9.124,
+          "y": 17.418
+        },
+        "aliases": [
+          "D320"
+        ],
+        "style": {
+          "fillcolor": "#87CEEB"
+        }
+      },
+      {
+        "id": "3K021",
+        "label_raw": "3K021 - Technikschacht",
+        "room_type": "Technikschacht",
+        "area_m2": 15.97,
+        "center_m": {
+          "x": 173.528,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      },
+      {
+        "id": "3K031",
+        "label_raw": "3K031 - EL.",
+        "room_type": "EL.",
+        "area_m2": 13.71,
+        "center_m": {
+          "x": 170.898,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      },
+      {
+        "id": "3K032",
+        "label_raw": "3K032 - Vorraum Elektro",
+        "room_type": "Vorraum Elektro",
+        "area_m2": 22.84,
+        "center_m": {
+          "x": 167.223,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3K041",
+        "label_raw": "3K041 - Vorraum/Treppe",
+        "room_type": "Vorraum/Treppe",
+        "area_m2": 134.87,
+        "center_m": {
+          "x": 158.799,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3K042",
+        "label_raw": "3K042 - Vorraum Lift",
+        "room_type": "Vorraum Lift",
+        "area_m2": 23.85,
+        "center_m": {
+          "x": 158.799,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3K051",
+        "label_raw": "3K051 - 3K042",
+        "room_type": "3K042",
+        "area_m2": null,
+        "center_m": {
+          "x": 155.699,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFFFFF"
+        }
+      },
+      {
+        "id": "3K052",
+        "label_raw": "3K052 - Lift",
+        "room_type": "Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 155.699,
+          "y": 22.151
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        }
+      },
+      {
+        "id": "3K053",
+        "label_raw": "3K053 - Lift",
+        "room_type": "Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 155.699,
+          "y": 20.051
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        }
+      },
+      {
+        "id": "3K061",
+        "label_raw": "3K061 - Technikschacht",
+        "room_type": "Technikschacht",
+        "area_m2": 15.97,
+        "center_m": {
+          "x": 152.798,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      },
+      {
+        "id": "3K101",
+        "label_raw": "3K101 - Technikschacht",
+        "room_type": "Technikschacht",
+        "area_m2": 15.97,
+        "center_m": {
+          "x": 128.529,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      },
+      {
+        "id": "3K102",
+        "label_raw": "3K102 - EL.",
+        "room_type": "EL.",
+        "area_m2": 13.71,
+        "center_m": {
+          "x": 125.899,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      },
+      {
+        "id": "3K111",
+        "label_raw": "3K111 - Vorraum Elektro",
+        "room_type": "Vorraum Elektro",
+        "area_m2": 22.84,
+        "center_m": {
+          "x": 122.215,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3K121",
+        "label_raw": "3K121 - Vorraum/Treppe",
+        "room_type": "Vorraum/Treppe",
+        "area_m2": 134.87,
+        "center_m": {
+          "x": 113.799,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3K122",
+        "label_raw": "3K122 - Vorraum Lift",
+        "room_type": "Vorraum Lift",
+        "area_m2": 23.85,
+        "center_m": {
+          "x": 113.799,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3K131",
+        "label_raw": "3K131 - Lift",
+        "room_type": "Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 109.849,
+          "y": 23.808
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        },
+        "lift_id": "LIFT_1"
+      },
+      {
+        "id": "3K132",
+        "label_raw": "3K132 - Lift",
+        "room_type": "Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 109.849,
+          "y": 20.728
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        },
+        "lift_id": "LIFT_2"
+      },
+      {
+        "id": "3K133",
+        "label_raw": "3K133 - Technikschacht",
+        "room_type": "Technikschacht",
+        "area_m2": 15.97,
+        "center_m": {
+          "x": 106.949,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      },
+      {
+        "id": "3K171",
+        "label_raw": "3K171 - Technikschacht",
+        "room_type": "Technikschacht",
+        "area_m2": 15.97,
+        "center_m": {
+          "x": 83.531,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      },
+      {
+        "id": "3K181",
+        "label_raw": "3K181 - EL.",
+        "room_type": "EL.",
+        "area_m2": 13.71,
+        "center_m": {
+          "x": 80.901,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      },
+      {
+        "id": "3K182",
+        "label_raw": "3K182 - Vorraum Elektro",
+        "room_type": "Vorraum Elektro",
+        "area_m2": 22.84,
+        "center_m": {
+          "x": 77.226,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3K191",
+        "label_raw": "3K191 - Vorraum/Treppe",
+        "room_type": "Vorraum/Treppe",
+        "area_m2": 134.85,
+        "center_m": {
+          "x": 68.799,
+          "y": 32.373
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3K192",
+        "label_raw": "3K192 - Vorauem Lift",
+        "room_type": "Vorauem Lift",
+        "area_m2": 23.85,
+        "center_m": {
+          "x": 68.799,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        }
+      },
+      {
+        "id": "3K201",
+        "label_raw": "3K201 - Lift",
+        "room_type": "Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 65.699,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        }
+      },
+      {
+        "id": "3K202",
+        "label_raw": "3K202 - Lift",
+        "room_type": "Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 65.699,
+          "y": 22.151
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        }
+      },
+      {
+        "id": "3K203",
+        "label_raw": "3K203 - Lift",
+        "room_type": "Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 65.699,
+          "y": 20.051
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        }
+      },
+      {
+        "id": "3K211",
+        "label_raw": "3K211 - Technikschacht",
+        "room_type": "Technikschacht",
+        "area_m2": 15.97,
+        "center_m": {
+          "x": 62.794,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      },
+      {
+        "id": "3K261",
+        "label_raw": "3K261 - Technikschacht",
+        "room_type": "Technikschacht",
+        "area_m2": 15.97,
+        "center_m": {
+          "x": 33.039,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      },
+      {
+        "id": "3K262",
+        "label_raw": "3K262 - Treppe",
+        "room_type": "Treppe",
+        "area_m2": 26.04,
+        "center_m": {
+          "x": 28.394,
+          "y": 24.126
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        }
+      },
+      {
+        "id": "3K271",
+        "label_raw": "3K271 - Vorraum Lift",
+        "room_type": "Vorraum Lift",
+        "area_m2": 25.98,
+        "center_m": {
+          "x": 23.799,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#D3D3D3"
+        }
+      },
+      {
+        "id": "3K281",
+        "label_raw": "3K281 - Lift",
+        "room_type": "Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 20.699,
+          "y": 23.343
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        }
+      },
+      {
+        "id": "3K282",
+        "label_raw": "3K282 - Lift",
+        "room_type": "Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 20.798,
+          "y": 20.956
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#FFE4B5"
+        }
+      },
+      {
+        "id": "3K283",
+        "label_raw": "3K283 - Technikschacht",
+        "room_type": "Technikschacht",
+        "area_m2": 15.97,
+        "center_m": {
+          "x": 17.799,
+          "y": 24.128
+        },
+        "aliases": [],
+        "style": {
+          "fillcolor": "#F5F5F5"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "3A011",
+        "target": "3B011",
+        "bidirectional": true,
+        "label_raw": "16m door 3A011-T1",
+        "distance_m": 16,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3A011-T1"
+        ]
+      },
+      {
+        "source": "3A051",
+        "target": "3B061",
+        "bidirectional": true,
+        "label_raw": "11m open",
+        "distance_m": 11,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3A051",
+        "target": "3K041",
+        "bidirectional": true,
+        "label_raw": "11m open",
+        "distance_m": 11,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3A071",
+        "target": "3B081",
+        "bidirectional": true,
+        "label_raw": "13m door 3A071-T1",
+        "distance_m": 13,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3A071-T1"
+        ]
+      },
+      {
+        "source": "3A072",
+        "target": "3B061",
+        "bidirectional": true,
+        "label_raw": "14m open",
+        "distance_m": 14,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3A072",
+        "target": "3B081",
+        "bidirectional": true,
+        "label_raw": "9m open",
+        "distance_m": 9,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3A091",
+        "target": "3A072",
+        "bidirectional": true,
+        "label_raw": "14m open",
+        "distance_m": 14,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3A091",
+        "target": "3K111",
+        "bidirectional": true,
+        "label_raw": "12m open",
+        "distance_m": 12,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3A131",
+        "target": "3K182",
+        "bidirectional": true,
+        "label_raw": "12m door 3A131-T1",
+        "distance_m": 12,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3A131-T1"
+        ]
+      },
+      {
+        "source": "3A242",
+        "target": "3A201",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "3A201-T1"
+        ],
+        "label_raw": "17m door 3A201-T1",
+        "distance_m": 17,
+        "fire_rating": null,
+        "notes": null,
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        }
+      },
+      {
+        "source": "3A242",
+        "target": "3A241",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "3A241-T1"
+        ],
+        "label_raw": "15m door 3A241-T1",
+        "distance_m": 15,
+        "fire_rating": null,
+        "notes": null,
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        }
+      },
+      {
+        "source": "3A242",
+        "target": "3A251",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "3A251-T1"
+        ],
+        "label_raw": "6m door 3A251-T1",
+        "distance_m": 6,
+        "fire_rating": null,
+        "notes": null,
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        }
+      },
+      {
+        "source": "3A242",
+        "target": "3A271",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "3A271-T1"
+        ],
+        "label_raw": "18m door 3A271-T1",
+        "distance_m": 18,
+        "fire_rating": null,
+        "notes": null,
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        }
+      },
+      {
+        "source": "3A242",
+        "target": "3B242",
+        "bidirectional": true,
+        "label_raw": "7m open",
+        "distance_m": 7,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3A242",
+        "target": "3K262",
+        "bidirectional": true,
+        "label_raw": "9m open",
+        "distance_m": 9,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3A242",
+        "target": "3K271",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "3K271-T1"
+        ],
+        "label_raw": "13m door 3K271-T1",
+        "distance_m": 13,
+        "fire_rating": null,
+        "notes": null,
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        }
+      },
+      {
+        "source": "3A261",
+        "target": "3A242",
+        "bidirectional": true,
+        "label_raw": "12m door 3A261-T1",
+        "distance_m": 12,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3A261-T1"
+        ]
+      },
+      {
+        "source": "3A281",
+        "target": "3A242",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "label_raw": "30m open",
+        "distance_m": 30,
+        "fire_rating": null,
+        "notes": null,
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        }
+      },
+      {
+        "source": "3B061",
+        "target": "3B011",
+        "bidirectional": true,
+        "label_raw": "33m open",
+        "distance_m": 33,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B061",
+        "target": "3B081",
+        "bidirectional": true,
+        "label_raw": "5m open",
+        "distance_m": 5,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B082",
+        "target": "3B081",
+        "bidirectional": true,
+        "label_raw": "2m door 3B082-T1",
+        "distance_m": 2,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B082-T1"
+        ]
+      },
+      {
+        "source": "3B091",
+        "target": "3B082",
+        "bidirectional": true,
+        "label_raw": "6m door 3B091-T1",
+        "distance_m": 6,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B091-T1"
+        ]
+      },
+      {
+        "source": "3B091",
+        "target": "3C081",
+        "bidirectional": true,
+        "label_raw": "10m door 3B091-T2",
+        "distance_m": 10,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B091-T2"
+        ]
+      },
+      {
+        "source": "3B141",
+        "target": "3K131",
+        "bidirectional": true,
+        "label_raw": "6m door 3B141-T1",
+        "distance_m": 6,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B141-T1"
+        ]
+      },
+      {
+        "source": "3B151",
+        "target": "3K132",
+        "bidirectional": true,
+        "label_raw": "18m open",
+        "distance_m": 18,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B151",
+        "target": "3K182",
+        "bidirectional": true,
+        "label_raw": "18m open",
+        "distance_m": 18,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B161",
+        "target": "3B151",
+        "bidirectional": true,
+        "label_raw": "5m door 3B161-T1",
+        "distance_m": 5,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B161-T1"
+        ]
+      },
+      {
+        "source": "3B162",
+        "target": "3B151",
+        "bidirectional": true,
+        "label_raw": "6m door 3B162-T4",
+        "distance_m": 6,
+        "fire_rating": null,
+        "notes": "bridge to connect corridor components",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B162-T4"
+        ]
+      },
+      {
+        "source": "3B162",
+        "target": "3B163",
+        "bidirectional": true,
+        "label_raw": "3m door 3B162-T1,3B163-T1,3B163-T2",
+        "distance_m": 3,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B162-T1",
+          "3B163-T1",
+          "3B163-T2"
+        ]
+      },
+      {
+        "source": "3B211",
+        "target": "3K201",
+        "bidirectional": true,
+        "label_raw": "6m open",
+        "distance_m": 6,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B211",
+        "target": "3K202",
+        "bidirectional": true,
+        "label_raw": "8m open",
+        "distance_m": 8,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B221",
+        "target": "3B211",
+        "bidirectional": true,
+        "label_raw": "4m door 3B221-T1",
+        "distance_m": 4,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B221-T1"
+        ]
+      },
+      {
+        "source": "3B222",
+        "target": "3B211",
+        "bidirectional": true,
+        "label_raw": "9m door 3B222-T1",
+        "distance_m": 9,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B222-T1"
+        ]
+      },
+      {
+        "source": "3B242",
+        "target": "3B211",
+        "bidirectional": true,
+        "label_raw": "20m open",
+        "distance_m": 20,
+        "fire_rating": null,
+        "notes": "bridge to connect corridor components",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B242",
+        "target": "3K262",
+        "bidirectional": true,
+        "label_raw": "11m open",
+        "distance_m": 11,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B251",
+        "target": "3A242",
+        "bidirectional": true,
+        "label_raw": "4m door 3B251-T1",
+        "distance_m": 4,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B251-T1"
+        ]
+      },
+      {
+        "source": "3B292",
+        "target": "3B291",
+        "bidirectional": true,
+        "label_raw": "7m door 3B292-T1",
+        "distance_m": 7,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B292-T1"
+        ]
+      },
+      {
+        "source": "3C091",
+        "target": "3K111",
+        "bidirectional": true,
+        "label_raw": "10m door 3C091-T1",
+        "distance_m": 10,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3C091-T1"
+        ]
+      },
+      {
+        "source": "3C121",
+        "target": "3B151",
+        "bidirectional": true,
+        "label_raw": "16m door 3C121-T1",
+        "distance_m": 16,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3C121-T1"
+        ]
+      },
+      {
+        "source": "3C141",
+        "target": "3B163",
+        "bidirectional": true,
+        "label_raw": "5m door 3C141-T1,3C141-T2",
+        "distance_m": 5,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3C141-T1",
+          "3C141-T2"
+        ]
+      },
+      {
+        "source": "3C161",
+        "target": "3K182",
+        "bidirectional": true,
+        "label_raw": "9m door 3C161-T1",
+        "distance_m": 9,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3C161-T1"
+        ]
+      },
+      {
+        "source": "3C181",
+        "target": "3K182",
+        "bidirectional": true,
+        "label_raw": "14m door 3C181-T1",
+        "distance_m": 14,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3C181-T1"
+        ]
+      },
+      {
+        "source": "3C211",
+        "target": "3C201",
+        "bidirectional": true,
+        "label_raw": "11m door 3C211-T1",
+        "distance_m": 11,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3C211-T1"
+        ]
+      },
+      {
+        "source": "3K021",
+        "target": "3K032",
+        "bidirectional": true,
+        "label_raw": "6m door 3K021-T1",
+        "distance_m": 6,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K021-T1"
+        ]
+      },
+      {
+        "source": "3K031",
+        "target": "3K032",
+        "bidirectional": true,
+        "label_raw": "4m door 3K031-T1",
+        "distance_m": 4,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K031-T1"
+        ]
+      },
+      {
+        "source": "3K032",
+        "target": "3K042",
+        "bidirectional": true,
+        "label_raw": "8m open",
+        "distance_m": 8,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K032",
+        "target": "3K052",
+        "bidirectional": true,
+        "label_raw": "14m open",
+        "distance_m": 14,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K041",
+        "target": "3K042",
+        "bidirectional": true,
+        "label_raw": "8m open",
+        "distance_m": 8,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K042",
+        "target": "3K052",
+        "bidirectional": true,
+        "label_raw": "5m open",
+        "distance_m": 5,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K042",
+        "target": "3K053",
+        "bidirectional": true,
+        "label_raw": "7m open",
+        "distance_m": 7,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K051",
+        "target": "3K042",
+        "bidirectional": true,
+        "label_raw": "3m door 3K051-T1",
+        "distance_m": 3,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K051-T1"
+        ]
+      },
+      {
+        "source": "3K052",
+        "target": "3K053",
+        "bidirectional": true,
+        "label_raw": "2m open",
+        "distance_m": 2,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K061",
+        "target": "3K042",
+        "bidirectional": true,
+        "label_raw": "6m door 3K061-T1",
+        "distance_m": 6,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K061-T1"
+        ]
+      },
+      {
+        "source": "3K101",
+        "target": "3K111",
+        "bidirectional": true,
+        "label_raw": "6m door 3K101-T1",
+        "distance_m": 6,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K101-T1"
+        ]
+      },
+      {
+        "source": "3K102",
+        "target": "3K111",
+        "bidirectional": true,
+        "label_raw": "4m door 3K102-T1",
+        "distance_m": 4,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K102-T1"
+        ]
+      },
+      {
+        "source": "3K111",
+        "target": "3K122",
+        "bidirectional": true,
+        "label_raw": "8m open",
+        "distance_m": 8,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K121",
+        "target": "3K111",
+        "bidirectional": true,
+        "label_raw": "17m open",
+        "distance_m": 17,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K121",
+        "target": "3K122",
+        "bidirectional": true,
+        "label_raw": "8m open",
+        "distance_m": 8,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K122",
+        "target": "3K132",
+        "bidirectional": true,
+        "label_raw": "7m open",
+        "distance_m": 7,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K131",
+        "target": "3K122",
+        "bidirectional": true,
+        "label_raw": "4m door 3K131-T1",
+        "distance_m": 4,
+        "fire_rating": null,
+        "notes": "bridge to connect corridor components",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K131-T1"
+        ]
+      },
+      {
+        "source": "3K132",
+        "target": "3K121",
+        "bidirectional": true,
+        "label_raw": "16m open",
+        "distance_m": 16,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K133",
+        "target": "3K122",
+        "bidirectional": true,
+        "label_raw": "7m door 3K133-T1",
+        "distance_m": 7,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K133-T1"
+        ]
+      },
+      {
+        "source": "3K171",
+        "target": "3K182",
+        "bidirectional": true,
+        "label_raw": "6m door 3K171-T1",
+        "distance_m": 6,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K171-T1"
+        ]
+      },
+      {
+        "source": "3K181",
+        "target": "3K182",
+        "bidirectional": true,
+        "label_raw": "4m door 3K181-T1",
+        "distance_m": 4,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K181-T1"
+        ]
+      },
+      {
+        "source": "3K182",
+        "target": "3K192",
+        "bidirectional": true,
+        "label_raw": "8m open",
+        "distance_m": 8,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K182",
+        "target": "3K201",
+        "bidirectional": true,
+        "label_raw": "12m open",
+        "distance_m": 12,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K191",
+        "target": "3K192",
+        "bidirectional": true,
+        "label_raw": "8m open",
+        "distance_m": 8,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K191",
+        "target": "3K201",
+        "bidirectional": true,
+        "label_raw": "11m open",
+        "distance_m": 11,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K192",
+        "target": "3K201",
+        "bidirectional": true,
+        "label_raw": "3m open",
+        "distance_m": 3,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K192",
+        "target": "3K202",
+        "bidirectional": true,
+        "label_raw": "5m open",
+        "distance_m": 5,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K211",
+        "target": "3B211",
+        "bidirectional": true,
+        "label_raw": "3m door 3K211-T1",
+        "distance_m": 3,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K211-T1"
+        ]
+      },
+      {
+        "source": "3K261",
+        "target": "3A242",
+        "bidirectional": true,
+        "label_raw": "4m door 3K261-T1",
+        "distance_m": 4,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3K261-T1"
+        ]
+      },
+      {
+        "source": "3K262",
+        "target": "3K271",
+        "bidirectional": true,
+        "label_raw": "5m open",
+        "distance_m": 5,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K271",
+        "target": "3K281",
+        "bidirectional": true,
+        "label_raw": "4m open",
+        "distance_m": 4,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K271",
+        "target": "3K282",
+        "bidirectional": true,
+        "label_raw": "6m open",
+        "distance_m": 6,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3K283",
+        "target": "3A242",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "3K283-T1"
+        ],
+        "distance_m": 19,
+        "fire_rating": null,
+        "notes": null,
+        "label_raw": "19m door 3K283-T1",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        }
+      },
+      {
+        "source": "3A011",
+        "target": "3K041",
+        "bidirectional": true,
+        "label_raw": "12m door A10_OG03_AD42.1",
+        "distance_m": 12,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "A10_OG03_AD42.1"
+        ]
+      },
+      {
+        "source": "3C071",
+        "target": "3B011",
+        "bidirectional": true,
+        "label_raw": "41m door 3C071-T1",
+        "distance_m": 41,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3C071-T1"
+        ]
+      },
+      {
+        "source": "3C072",
+        "target": "3B011",
+        "bidirectional": true,
+        "label_raw": "45m door 3C072-T1",
+        "distance_m": 45,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3C072-T1"
+        ]
+      },
+      {
+        "source": "3C081",
+        "target": "3B081",
+        "bidirectional": true,
+        "label_raw": "8m door 3C081-T1",
+        "distance_m": 8,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3C081-T1"
+        ]
+      },
+      {
+        "source": "3K042",
+        "target": "3B011",
+        "bidirectional": true,
+        "label_raw": "20m door A10_OG03_BC50.1a,A10_OG03_BC50.1",
+        "distance_m": 20,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "A10_OG03_BC50.1a",
+          "A10_OG03_BC50.1"
+        ]
+      },
+      {
+        "source": "3K032",
+        "target": "3B011",
+        "bidirectional": true,
+        "label_raw": "11m door A10_OG03_BC35.1a,A10_OG03_BC35.1",
+        "distance_m": 11,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "A10_OG03_BC35.1a",
+          "A10_OG03_BC35.1"
+        ]
+      },
+      {
+        "source": "3A091",
+        "target": "3K121",
+        "bidirectional": true,
+        "label_raw": "12m door 20_OG03_AD117.1",
+        "distance_m": 12,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "20_OG03_AD117.1"
+        ]
+      },
+      {
+        "source": "3K111",
+        "target": "3C111",
+        "bidirectional": true,
+        "label_raw": "12m door A20_OG03_BC110.1a",
+        "distance_m": 12,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "A20_OG03_BC110.1a"
+        ]
+      },
+      {
+        "source": "3K122",
+        "target": "3C121",
+        "bidirectional": true,
+        "label_raw": "16m door A20_OG03_BC125.1a",
+        "distance_m": 16,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "A20_OG03_BC125.1a"
+        ]
+      },
+      {
+        "source": "3K121",
+        "target": "3A131",
+        "bidirectional": true,
+        "label_raw": "33m door A20_OG03_AD117.2",
+        "distance_m": 33,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "A20_OG03_AD117.2"
+        ]
+      },
+      {
+        "source": "3B151",
+        "target": "3A131",
+        "bidirectional": true,
+        "label_raw": "23m open",
+        "distance_m": 23,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B163",
+        "target": "3B151",
+        "bidirectional": true,
+        "label_raw": "8m door 3B163-T1",
+        "distance_m": 8,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "3B163-T1"
+        ]
+      },
+      {
+        "source": "3A131",
+        "target": "3K191",
+        "bidirectional": true,
+        "label_raw": "12m door 30_OG03_AD192.1",
+        "distance_m": 12,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "30_OG03_AD192.1"
+        ]
+      },
+      {
+        "source": "3K203",
+        "target": "3K192",
+        "bidirectional": true,
+        "label_raw": "7m open",
+        "distance_m": 7,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3C181",
+        "target": "3K192",
+        "bidirectional": true,
+        "label_raw": "8m door A30_OG03_BC200.1",
+        "distance_m": 8,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "A30_OG03_BC200.1"
+        ]
+      },
+      {
+        "source": "3C201",
+        "target": "3K192",
+        "bidirectional": true,
+        "label_raw": "14m door A30_OG03_BC200.1a",
+        "distance_m": 14,
+        "fire_rating": null,
+        "notes": "door connection",
+        "style": {
+          "color": "#000000",
+          "penwidth": 1.3,
+          "linestyle": "solid"
+        },
+        "connection_type": "door",
+        "door_ids": [
+          "A30_OG03_BC200.1a"
+        ]
+      },
+      {
+        "source": "3K191",
+        "target": "3A201",
+        "bidirectional": true,
+        "label_raw": "23m open",
+        "distance_m": 23,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B241",
+        "target": "3B242",
+        "bidirectional": true,
+        "label_raw": "7m open",
+        "distance_m": 7,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B232",
+        "target": "3B242",
+        "bidirectional": true,
+        "label_raw": "9m open",
+        "distance_m": 9,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B231",
+        "target": "3B242",
+        "bidirectional": true,
+        "label_raw": "4m open",
+        "distance_m": 4,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3C231",
+        "target": "3B242",
+        "bidirectional": true,
+        "label_raw": "9m open",
+        "distance_m": 9,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3C251",
+        "target": "3B242",
+        "bidirectional": true,
+        "label_raw": "16m open",
+        "distance_m": 16,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3C271",
+        "target": "3K271",
+        "bidirectional": true,
+        "label_raw": "11m open",
+        "distance_m": 11,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3C281",
+        "target": "3B291",
+        "bidirectional": true,
+        "label_raw": "13m open",
+        "distance_m": 13,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      },
+      {
+        "source": "3B291",
+        "target": "3A281",
+        "bidirectional": true,
+        "label_raw": "14m open",
+        "distance_m": 14,
+        "fire_rating": null,
+        "notes": "open connection",
+        "style": {
+          "color": "#666666",
+          "penwidth": 1.0,
+          "linestyle": "dashed"
+        },
+        "connection_type": "open",
+        "door_ids": []
+      }
+    ]
+  }
+}

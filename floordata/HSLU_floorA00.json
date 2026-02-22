@@ -1,0 +1,1767 @@
+{
+  "graph": {
+    "id": "HSLU_FloorA00",
+    "directed": true,
+    "coordinate_system": {
+      "origin": "bottom_left_page",
+      "units": "m",
+      "scale_m_per_pdf_unit": 0.02775725,
+      "page_size_pdf_units": {
+        "width": 6095.0,
+        "height": 1190.0
+      }
+    },
+    "nodes": [
+      {
+        "id": "0A011",
+        "name": "Drittmieter",
+        "label": "0A011 Drittmieter",
+        "room_type": "Drittmieter",
+        "area_m2": null,
+        "center_m": {
+          "x": 125.11,
+          "y": 25.472
+        }
+      },
+      {
+        "id": "0A061",
+        "name": "Aula Regieraum / Lager",
+        "label": "0A061 Aula Regieraum / Lager",
+        "room_type": "Aula Regieraum / Lager",
+        "area_m2": null,
+        "center_m": {
+          "x": 120.628,
+          "y": 25.696
+        }
+      },
+      {
+        "id": "0A062",
+        "name": "Aula / Ausstellung",
+        "label": "0A062 Aula / Ausstellung",
+        "room_type": "Aula / Ausstellung",
+        "area_m2": null,
+        "center_m": {
+          "x": 104.547,
+          "y": 25.598
+        }
+      },
+      {
+        "id": "0A101",
+        "name": "HD/Aula Lager",
+        "label": "0A101 HD/Aula Lager",
+        "room_type": "HD/Aula Lager",
+        "area_m2": null,
+        "center_m": {
+          "x": 92.38,
+          "y": 25.472
+        }
+      },
+      {
+        "id": "0A121",
+        "name": "Gard./DU",
+        "label": "0A121 Gard./DU",
+        "room_type": "Gard./DU",
+        "area_m2": null,
+        "center_m": {
+          "x": 88.369,
+          "y": 26.082
+        }
+      },
+      {
+        "id": "0A122",
+        "name": "Anlieferung",
+        "label": "0A122 Anlieferung",
+        "room_type": "Anlieferung",
+        "area_m2": null,
+        "center_m": {
+          "x": 88.644,
+          "y": 22.317
+        }
+      },
+      {
+        "id": "0A131",
+        "name": "Gard./DU",
+        "label": "0A131 Gard./DU",
+        "room_type": "Gard./DU",
+        "area_m2": null,
+        "center_m": {
+          "x": 84.748,
+          "y": 26.079
+        }
+      },
+      {
+        "id": "0A132",
+        "name": "Korridor",
+        "label": "0A132 Korridor",
+        "room_type": "Korridor",
+        "area_m2": null,
+        "center_m": {
+          "x": 82.171,
+          "y": 23.34
+        }
+      },
+      {
+        "id": "0A133",
+        "name": "Entsorgung",
+        "label": "0A133 Entsorgung",
+        "room_type": "Entsorgung",
+        "area_m2": null,
+        "center_m": {
+          "x": 87.075,
+          "y": 22.317
+        }
+      },
+      {
+        "id": "0A134",
+        "name": "Tiefkuehlraum",
+        "label": "0A134 Tiefkuehlraum",
+        "room_type": "Tiefkuehlraum",
+        "area_m2": null,
+        "center_m": {
+          "x": 82.743,
+          "y": 21.746
+        }
+      },
+      {
+        "id": "0A141",
+        "name": "Economat Service",
+        "label": "0A141 Economat Service",
+        "room_type": "Economat Service",
+        "area_m2": null,
+        "center_m": {
+          "x": 81.268,
+          "y": 26.08
+        }
+      },
+      {
+        "id": "0A142",
+        "name": "Kuehl.",
+        "label": "0A142 Kuehl.",
+        "room_type": "Kuehl.",
+        "area_m2": null,
+        "center_m": {
+          "x": 81.406,
+          "y": 22.317
+        }
+      },
+      {
+        "id": "0A143",
+        "name": "Economat Kueche",
+        "label": "0A143 Economat Kueche",
+        "room_type": "Economat Kueche",
+        "area_m2": null,
+        "center_m": {
+          "x": 77.727,
+          "y": 26.08
+        }
+      },
+      {
+        "id": "0A144",
+        "name": "Kuehl.",
+        "label": "0A144 Kuehl.",
+        "room_type": "Kuehl.",
+        "area_m2": null,
+        "center_m": {
+          "x": 79.753,
+          "y": 22.317
+        }
+      },
+      {
+        "id": "0A151",
+        "name": "Buero",
+        "label": "0A151 Buero",
+        "room_type": "Buero",
+        "area_m2": null,
+        "center_m": {
+          "x": 75.364,
+          "y": 26.08
+        }
+      },
+      {
+        "id": "0A152",
+        "name": "Kuehl.",
+        "label": "0A152 Kuehl.",
+        "room_type": "Kuehl.",
+        "area_m2": null,
+        "center_m": {
+          "x": 78.101,
+          "y": 22.317
+        }
+      },
+      {
+        "id": "0A153",
+        "name": "Kuehl.",
+        "label": "0A153 Kuehl.",
+        "room_type": "Kuehl.",
+        "area_m2": null,
+        "center_m": {
+          "x": 76.252,
+          "y": 22.317
+        }
+      },
+      {
+        "id": "0A161",
+        "name": "Kueche",
+        "label": "0A161 Kueche",
+        "room_type": "Kueche",
+        "area_m2": null,
+        "center_m": {
+          "x": 71.423,
+          "y": 26.08
+        }
+      },
+      {
+        "id": "0A181",
+        "name": "Ausgabe",
+        "label": "0A181 Ausgabe",
+        "room_type": "Ausgabe",
+        "area_m2": null,
+        "center_m": {
+          "x": 59.906,
+          "y": 25.472
+        }
+      },
+      {
+        "id": "0A191",
+        "name": "Restaurant",
+        "label": "0A191 Restaurant",
+        "room_type": "Restaurant",
+        "area_m2": null,
+        "center_m": {
+          "x": 45.055,
+          "y": 24.921
+        }
+      },
+      {
+        "id": "0A251",
+        "name": "Bewgung",
+        "label": "0A251 Bewgung",
+        "room_type": "Bewgung",
+        "area_m2": null,
+        "center_m": {
+          "x": 23.614,
+          "y": 25.472
+        }
+      },
+      {
+        "id": "0A271",
+        "name": "Vorraum",
+        "label": "0A271 Vorraum",
+        "room_type": "Vorraum",
+        "area_m2": null,
+        "center_m": {
+          "x": 16.507,
+          "y": 25.472
+        }
+      },
+      {
+        "id": "0A272",
+        "name": "WC",
+        "label": "0A272 WC",
+        "room_type": "WC",
+        "area_m2": null,
+        "center_m": {
+          "x": 16.979,
+          "y": 23.58
+        }
+      },
+      {
+        "id": "0A273",
+        "name": "WC",
+        "label": "0A273 WC",
+        "room_type": "WC",
+        "area_m2": null,
+        "center_m": {
+          "x": 16.979,
+          "y": 22.513
+        }
+      },
+      {
+        "id": "0A281",
+        "name": "Lager",
+        "label": "0A281 Lager",
+        "room_type": "Lager",
+        "area_m2": null,
+        "center_m": {
+          "x": 16.979,
+          "y": 21.206
+        }
+      },
+      {
+        "id": "0A291",
+        "name": "Fitness I",
+        "label": "0A291 Fitness I",
+        "room_type": "Fitness I",
+        "area_m2": null,
+        "center_m": {
+          "x": 9.51,
+          "y": 25.472
+        }
+      },
+      {
+        "id": "0B011",
+        "name": "Drittmieter",
+        "label": "0B011 Drittmieter",
+        "room_type": "Drittmieter",
+        "area_m2": null,
+        "center_m": {
+          "x": 138.872,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0B111",
+        "name": "Gard./DU Personal",
+        "label": "0B111 Gard./DU Personal",
+        "room_type": "Gard./DU Personal",
+        "area_m2": null,
+        "center_m": {
+          "x": 96.321,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0B112",
+        "name": "Catering",
+        "label": "0B112 Catering",
+        "room_type": "Catering",
+        "area_m2": null,
+        "center_m": {
+          "x": 97.512,
+          "y": 15.098
+        }
+      },
+      {
+        "id": "0B141",
+        "name": "WC H",
+        "label": "0B141 WC H",
+        "room_type": "WC H",
+        "area_m2": null,
+        "center_m": {
+          "x": 77.106,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0B142",
+        "name": "Korridor",
+        "label": "0B142 Korridor",
+        "room_type": "Korridor",
+        "area_m2": null,
+        "center_m": {
+          "x": 81.921,
+          "y": 15.389
+        }
+      },
+      {
+        "id": "0B143",
+        "name": "WC IV",
+        "label": "0B143 WC IV",
+        "room_type": "WC IV",
+        "area_m2": null,
+        "center_m": {
+          "x": 81.311,
+          "y": 16.706
+        }
+      },
+      {
+        "id": "0B144",
+        "name": "WC IV",
+        "label": "0B144 WC IV",
+        "room_type": "WC IV",
+        "area_m2": null,
+        "center_m": {
+          "x": 79.726,
+          "y": 16.706
+        }
+      },
+      {
+        "id": "0B151",
+        "name": "WC D",
+        "label": "0B151 WC D",
+        "room_type": "WC D",
+        "area_m2": null,
+        "center_m": {
+          "x": 76.634,
+          "y": 15.554
+        }
+      },
+      {
+        "id": "0B161",
+        "name": "Spuele",
+        "label": "0B161 Spuele",
+        "room_type": "Spuele",
+        "area_m2": null,
+        "center_m": {
+          "x": 70.98,
+          "y": 17.632
+        }
+      },
+      {
+        "id": "0B181",
+        "name": "Putzraum",
+        "label": "0B181 Putzraum",
+        "room_type": "Putzraum",
+        "area_m2": null,
+        "center_m": {
+          "x": 61.722,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0B211",
+        "name": "Restaurant",
+        "label": "0B211 Restaurant",
+        "room_type": "Restaurant",
+        "area_m2": null,
+        "center_m": {
+          "x": 45.051,
+          "y": 18.434
+        }
+      },
+      {
+        "id": "0C051",
+        "name": "Foyer",
+        "label": "0C051 Foyer",
+        "room_type": "Foyer",
+        "area_m2": null,
+        "center_m": {
+          "x": 102.551,
+          "y": 13.914
+        }
+      },
+      {
+        "id": "0C131",
+        "name": "Bistro",
+        "label": "0C131 Bistro",
+        "room_type": "Bistro",
+        "area_m2": null,
+        "center_m": {
+          "x": 70.98,
+          "y": 13.634
+        }
+      },
+      {
+        "id": "0C281",
+        "name": "Restaurant/Self",
+        "label": "0C281 Restaurant/Self",
+        "room_type": "Restaurant/Self",
+        "area_m2": null,
+        "center_m": {
+          "x": 45.072,
+          "y": 13.562
+        }
+      },
+      {
+        "id": "0K031",
+        "name": "Drittmieter",
+        "label": "0K031 Drittmieter",
+        "room_type": "Drittmieter",
+        "area_m2": null,
+        "center_m": {
+          "x": 134.634,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0K032",
+        "name": "Lift 1",
+        "label": "0K032 Lift 1",
+        "room_type": "Lift 1",
+        "area_m2": null,
+        "center_m": {
+          "x": 134.556,
+          "y": 17.263
+        }
+      },
+      {
+        "id": "0K033",
+        "name": "Drittmieter",
+        "label": "0K033 Drittmieter",
+        "room_type": "Drittmieter",
+        "area_m2": null,
+        "center_m": {
+          "x": 134.556,
+          "y": 15.825
+        }
+      },
+      {
+        "id": "0K034",
+        "name": "Drittmieter",
+        "label": "0K034 Drittmieter",
+        "room_type": "Drittmieter",
+        "area_m2": null,
+        "center_m": {
+          "x": 134.018,
+          "y": 13.772
+        }
+      },
+      {
+        "id": "0K035",
+        "name": "Drittmieter/Treppe",
+        "label": "0K035 Drittmieter/Treppe",
+        "room_type": "Drittmieter/Treppe",
+        "area_m2": null,
+        "center_m": {
+          "x": 131.742,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0K041",
+        "name": "Vorraum/Treppe",
+        "label": "0K041 Vorraum/Treppe",
+        "room_type": "Vorraum/Treppe",
+        "area_m2": null,
+        "center_m": {
+          "x": 125.034,
+          "y": 13.91
+        }
+      },
+      {
+        "id": "0K042",
+        "name": "Vorraum Lift",
+        "label": "0K042 Vorraum Lift",
+        "room_type": "Vorraum Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 125.114,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0K051",
+        "name": "Lift 1",
+        "label": "0K051 Lift 1",
+        "room_type": "Lift 1",
+        "area_m2": null,
+        "center_m": {
+          "x": 122.675,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0K052",
+        "name": "Lift 2",
+        "label": "0K052 Lift 2",
+        "room_type": "Lift 2",
+        "area_m2": null,
+        "center_m": {
+          "x": 122.675,
+          "y": 17.429
+        }
+      },
+      {
+        "id": "0K053",
+        "name": "Lift 3",
+        "label": "0K053 Lift 3",
+        "room_type": "Lift 3",
+        "area_m2": null,
+        "center_m": {
+          "x": 122.675,
+          "y": 15.812
+        }
+      },
+      {
+        "id": "0K121",
+        "name": "Vorraum/Treppe",
+        "label": "0K121 Vorraum/Treppe",
+        "room_type": "Vorraum/Treppe",
+        "area_m2": null,
+        "center_m": {
+          "x": 89.628,
+          "y": 13.91
+        }
+      },
+      {
+        "id": "0K122",
+        "name": "Vorraum Lift",
+        "label": "0K122 Vorraum Lift",
+        "room_type": "Vorraum Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 89.707,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0K131",
+        "name": "Lift 2",
+        "label": "0K131 Lift 2",
+        "room_type": "Lift 2",
+        "area_m2": null,
+        "center_m": {
+          "x": 86.606,
+          "y": 18.733
+        }
+      },
+      {
+        "id": "0K132",
+        "name": "Lift 1",
+        "label": "0K132 Lift 1",
+        "room_type": "Lift 1",
+        "area_m2": null,
+        "center_m": {
+          "x": 86.599,
+          "y": 16.309
+        }
+      },
+      {
+        "id": "0K181",
+        "name": "EL.",
+        "label": "0K181 EL.",
+        "room_type": "EL.",
+        "area_m2": null,
+        "center_m": {
+          "x": 63.822,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0K191",
+        "name": "Vorraum/Treppe",
+        "label": "0K191 Vorraum/Treppe",
+        "room_type": "Vorraum/Treppe",
+        "area_m2": null,
+        "center_m": {
+          "x": 54.223,
+          "y": 13.91
+        }
+      },
+      {
+        "id": "0K192",
+        "name": "Vorraum Lift",
+        "label": "0K192 Vorraum Lift",
+        "room_type": "Vorraum Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 54.302,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0K201",
+        "name": "Lift 2",
+        "label": "0K201 Lift 2",
+        "room_type": "Lift 2",
+        "area_m2": null,
+        "center_m": {
+          "x": 51.861,
+          "y": 18.985
+        }
+      },
+      {
+        "id": "0K202",
+        "name": "Lift 1",
+        "label": "0K202 Lift 1",
+        "room_type": "Lift 1",
+        "area_m2": null,
+        "center_m": {
+          "x": 51.767,
+          "y": 17.477
+        }
+      },
+      {
+        "id": "0K203",
+        "name": "Lift 3",
+        "label": "0K203 Lift 3",
+        "room_type": "Lift 3",
+        "area_m2": null,
+        "center_m": {
+          "x": 51.861,
+          "y": 15.777
+        }
+      },
+      {
+        "id": "0K251",
+        "name": "Fitness II",
+        "label": "0K251 Fitness II",
+        "room_type": "Fitness II",
+        "area_m2": null,
+        "center_m": {
+          "x": 28.256,
+          "y": 19.099
+        }
+      },
+      {
+        "id": "0K262",
+        "name": "Treppe",
+        "label": "0K262 Treppe",
+        "room_type": "Treppe",
+        "area_m2": null,
+        "center_m": {
+          "x": 22.43,
+          "y": 19.099
+        }
+      },
+      {
+        "id": "0K271",
+        "name": "Vorraum Lift",
+        "label": "0K271 Vorraum Lift",
+        "room_type": "Vorraum Lift",
+        "area_m2": null,
+        "center_m": {
+          "x": 18.814,
+          "y": 19.099
+        }
+      },
+      {
+        "id": "0K272",
+        "name": "Eingang",
+        "label": "0K272 Eingang",
+        "room_type": "Eingang",
+        "area_m2": null,
+        "center_m": {
+          "x": 17.634,
+          "y": 13.969
+        }
+      },
+      {
+        "id": "0K281",
+        "name": "Lift 1",
+        "label": "0K281 Lift 1",
+        "room_type": "Lift 1",
+        "area_m2": null,
+        "center_m": {
+          "x": 16.454,
+          "y": 18.367
+        }
+      },
+      {
+        "id": "0K282",
+        "name": "Lift 2",
+        "label": "0K282 Lift 2",
+        "room_type": "Lift 2",
+        "area_m2": null,
+        "center_m": {
+          "x": 16.532,
+          "y": 16.489
+        }
+      },
+      {
+        "id": "Durchgangsraum",
+        "name": "Durchgangsraum",
+        "label": "Durchgangsraum",
+        "room_type": "Durchgangsraum",
+        "area_m2": null,
+        "center_m": {
+          "x": 21.634,
+          "y": 13.969
+        }
+      },
+      {
+        "id": "Aussenbereich",
+        "name": "Aussenbereich",
+        "label": "Aussenbereich",
+        "room_type": "Aussenbereich",
+        "area_m2": null,
+        "center_m": {
+          "x": 34.78,
+          "y": 19.243
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "0K033",
+        "target": "0K034",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 2.591,
+        "notes": [
+          "user_specified_K034"
+        ]
+      },
+      {
+        "source": "0B011",
+        "target": "0K034",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 10.067,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0A061",
+        "target": "0A062",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A10_EG00_AD70.4",
+          "A20_EG00_AD120.5"
+        ],
+        "distance_m": 16.179,
+        "notes": []
+      },
+      {
+        "source": "0K031",
+        "target": "0K035",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A10_EG00_BC40.1"
+        ],
+        "distance_m": 2.892,
+        "notes": [
+          "auto_corridor_mst"
+        ]
+      },
+      {
+        "source": "0A101",
+        "target": "0A121",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A20_EG00_AD120.7"
+        ],
+        "distance_m": 4.621,
+        "notes": []
+      },
+      {
+        "source": "0A121",
+        "target": "0A131",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A20_EG00_AD120.8"
+        ],
+        "distance_m": 3.624,
+        "notes": []
+      },
+      {
+        "source": "0A131",
+        "target": "0A141",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A20_EG00_AD120.9"
+        ],
+        "distance_m": 3.481,
+        "notes": []
+      },
+      {
+        "source": "0K121",
+        "target": "0K122",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 5.154,
+        "notes": [
+          "user_specified_K122"
+        ]
+      },
+      {
+        "source": "0B181",
+        "target": "0K181",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A30_EG00_AD190.1",
+          "A30_EG00_AD190.2",
+          "A30_EG00_BC180.1",
+          "A30_EG00_BC180.2"
+        ],
+        "distance_m": 2.1,
+        "notes": []
+      },
+      {
+        "source": "0A151",
+        "target": "0A161",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A30_EG00_AD190.5",
+          "A30_EG00_AD190.6"
+        ],
+        "distance_m": 3.941,
+        "notes": []
+      },
+      {
+        "source": "0A181",
+        "target": "0B181",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A30_EG00_AD190.7"
+        ],
+        "distance_m": 8.303,
+        "notes": []
+      },
+      {
+        "source": "0A181",
+        "target": "0K192",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A30_EG00_AD190.8"
+        ],
+        "distance_m": 12.091,
+        "notes": []
+      },
+      {
+        "source": "0A191",
+        "target": "0B211",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A30_EG00_AD190.9"
+        ],
+        "distance_m": 6.491,
+        "notes": []
+      },
+      {
+        "source": "0B181",
+        "target": "0K192",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A30_EG00_BC197.1"
+        ],
+        "distance_m": 7.42,
+        "notes": []
+      },
+      {
+        "source": "0A251",
+        "target": "0K251",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A40_EG00_AD275.7",
+          "A40_EG00_AD275.8"
+        ],
+        "distance_m": 11.015,
+        "notes": []
+      },
+      {
+        "source": "0A251",
+        "target": "0A271",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [
+          "A40_EG00_AD275.9"
+        ],
+        "distance_m": 7.107,
+        "notes": []
+      },
+      {
+        "source": "0K031",
+        "target": "0K033",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 3.238,
+        "notes": [
+          "auto_corridor_mst"
+        ]
+      },
+      {
+        "source": "0K191",
+        "target": "0K192",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 5.154,
+        "notes": [
+          "auto_corridor_mst"
+        ]
+      },
+      {
+        "source": "0K041",
+        "target": "0K042",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 5.155,
+        "notes": [
+          "user_specified_K042"
+        ]
+      },
+      {
+        "source": "0K181",
+        "target": "0K192",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 9.52,
+        "notes": [
+          "auto_corridor_mst"
+        ]
+      },
+      {
+        "source": "0K192",
+        "target": "0K251",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 26.16,
+        "notes": [
+          "auto_corridor_mst"
+        ]
+      },
+      {
+        "source": "0K042",
+        "target": "0K052",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 3.995,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0K122",
+        "target": "0K131",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 3.353,
+        "notes": [
+          "user_specified_only_lift"
+        ]
+      },
+      {
+        "source": "0K192",
+        "target": "0K201",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 2.441,
+        "notes": [
+          "user_specified_only_neighbors"
+        ]
+      },
+      {
+        "source": "0K192",
+        "target": "0K202",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 4.043,
+        "notes": [
+          "user_specified_only_neighbors"
+        ]
+      },
+      {
+        "source": "0A122",
+        "target": "0K122",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 4.395,
+        "notes": [
+          "user_specified_K122"
+        ]
+      },
+      {
+        "source": "0A153",
+        "target": "0K181",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 15.762,
+        "notes": [
+          "auto_attach"
+        ]
+      },
+      {
+        "source": "0A272",
+        "target": "0K271",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 6.316,
+        "notes": [
+          "auto_attach"
+        ]
+      },
+      {
+        "source": "0A273",
+        "target": "0K271",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 5.249,
+        "notes": [
+          "auto_attach"
+        ]
+      },
+      {
+        "source": "0A143",
+        "target": "0A151",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 2.363,
+        "notes": [
+          "auto_connect_component"
+        ]
+      },
+      {
+        "source": "0B211",
+        "target": "0C281",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 4.893,
+        "notes": [
+          "auto_connect_component"
+        ]
+      },
+      {
+        "source": "0A141",
+        "target": "0A143",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 3.541,
+        "notes": [
+          "auto_connect_component"
+        ]
+      },
+      {
+        "source": "0A291",
+        "target": "0A271",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 6.997,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "0K281",
+        "target": "0K271",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 3.092,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "0K282",
+        "target": "0K271",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 4.892,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "0A281",
+        "target": "0A271",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 4.738,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "0A271",
+        "target": "0K271",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 8.68,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "0K262",
+        "target": "0K271",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 3.616,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "0K272",
+        "target": "0A291",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 19.627,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "0K272",
+        "target": "0K271",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 6.31,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "Durchgangsraum",
+        "target": "0K272",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 4.0,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "Aussenbereich",
+        "target": "0A251",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 17.395,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "Aussenbereich",
+        "target": "0K251",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 6.668,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "Aussenbereich",
+        "target": "Durchgangsraum",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 18.42,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "Aussenbereich",
+        "target": "0A191",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 15.953,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "Aussenbereich",
+        "target": "0B211",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 11.08,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "Aussenbereich",
+        "target": "0C281",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 15.973,
+        "notes": [
+          "manual_override_user"
+        ]
+      },
+      {
+        "source": "0C281",
+        "target": "0K191",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 9.499,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0K203",
+        "target": "0K192",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 5.649,
+        "notes": [
+          "user_specified_only_neighbors"
+        ]
+      },
+      {
+        "source": "0K192",
+        "target": "0A191",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 15.183,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0A191",
+        "target": "0A181",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 15.402,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0K191",
+        "target": "0C131",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 17.033,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0A181",
+        "target": "0A161",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 12.125,
+        "notes": [
+          "user_specified_open"
+        ]
+      },
+      {
+        "source": "0A161",
+        "target": "0A132",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 13.488,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0A132",
+        "target": "0A151",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 9.547,
+        "notes": [
+          "user_specified_from_0A132"
+        ]
+      },
+      {
+        "source": "0A132",
+        "target": "0A143",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 7.184,
+        "notes": [
+          "user_specified_from_0A132"
+        ]
+      },
+      {
+        "source": "0A132",
+        "target": "0A141",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 3.643,
+        "notes": [
+          "user_specified_from_0A132"
+        ]
+      },
+      {
+        "source": "0A132",
+        "target": "0A131",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 5.316,
+        "notes": [
+          "user_specified_from_0A132"
+        ]
+      },
+      {
+        "source": "0A132",
+        "target": "0A121",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 8.94,
+        "notes": [
+          "user_specified_from_0A132"
+        ]
+      },
+      {
+        "source": "0A132",
+        "target": "0A153",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 6.942,
+        "notes": [
+          "user_specified_from_0A132"
+        ]
+      },
+      {
+        "source": "0A132",
+        "target": "0A152",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 5.093,
+        "notes": [
+          "user_specified_from_0A132"
+        ]
+      },
+      {
+        "source": "0A132",
+        "target": "0A144",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 3.441,
+        "notes": [
+          "user_specified_from_0A132"
+        ]
+      },
+      {
+        "source": "0A132",
+        "target": "0A142",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 1.788,
+        "notes": [
+          "user_specified_from_0A132"
+        ]
+      },
+      {
+        "source": "0A132",
+        "target": "0A122",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 7.496,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0A134",
+        "target": "0A142",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 1.908,
+        "notes": [
+          "user_specified_only"
+        ]
+      },
+      {
+        "source": "0A133",
+        "target": "0A122",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 1.569,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0C131",
+        "target": "0B142",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 12.696,
+        "notes": [
+          "user_specified_only_neighbors"
+        ]
+      },
+      {
+        "source": "0C131",
+        "target": "0K121",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 18.924,
+        "notes": [
+          "user_specified_K121"
+        ]
+      },
+      {
+        "source": "0B142",
+        "target": "0B151",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 5.452,
+        "notes": [
+          "user_specified_separate"
+        ]
+      },
+      {
+        "source": "0B142",
+        "target": "0B141",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 8.411,
+        "notes": [
+          "user_specified_separate"
+        ]
+      },
+      {
+        "source": "0B142",
+        "target": "0B143",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 1.927,
+        "notes": [
+          "user_specified_separate"
+        ]
+      },
+      {
+        "source": "0B142",
+        "target": "0B144",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 3.512,
+        "notes": [
+          "user_specified_separate"
+        ]
+      },
+      {
+        "source": "0K121",
+        "target": "0B112",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 9.072,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0K121",
+        "target": "0C051",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 12.927,
+        "notes": [
+          "user_specified_C051"
+        ]
+      },
+      {
+        "source": "0K122",
+        "target": "0K132",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 5.784,
+        "notes": [
+          "user_specified_only_lift"
+        ]
+      },
+      {
+        "source": "0K122",
+        "target": "0A101",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 9.16,
+        "notes": [
+          "user_specified_K122"
+        ]
+      },
+      {
+        "source": "0A101",
+        "target": "0A062",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 12.293,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0C051",
+        "target": "0A062",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 13.68,
+        "notes": [
+          "user_specified_C051"
+        ]
+      },
+      {
+        "source": "0C051",
+        "target": "0K041",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 22.487,
+        "notes": [
+          "user_specified_K041"
+        ]
+      },
+      {
+        "source": "0K041",
+        "target": "0K034",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 9.122,
+        "notes": [
+          "user_specified_K034"
+        ]
+      },
+      {
+        "source": "0K042",
+        "target": "0K053",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 5.612,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0K034",
+        "target": "0K032",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 4.029,
+        "notes": [
+          "user_specified_K034"
+        ]
+      },
+      {
+        "source": "0K034",
+        "target": "0K031",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 5.829,
+        "notes": [
+          "user_specified_K034"
+        ]
+      },
+      {
+        "source": "0K034",
+        "target": "0K035",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 7.489,
+        "notes": [
+          "user_specified_K034"
+        ]
+      },
+      {
+        "source": "0B011",
+        "target": "0A011",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 20.249,
+        "notes": [
+          "user_specified"
+        ]
+      },
+      {
+        "source": "0C131",
+        "target": "0B161",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 3.998,
+        "notes": [
+          "reconnected_to_avoid_isolation"
+        ]
+      },
+      {
+        "source": "0K051",
+        "target": "0K042",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 2.439,
+        "notes": [
+          "user_fix_K051_only_to_K042"
+        ]
+      },
+      {
+        "source": "0B111",
+        "target": "0K122",
+        "bidirectional": true,
+        "connection_type": "door",
+        "door_ids": [],
+        "distance_m": 6.614,
+        "notes": [
+          "user_specified_B111_only_via_K122"
+        ]
+      },
+      {
+        "source": "0A281",
+        "target": "0A291",
+        "bidirectional": true,
+        "connection_type": "open",
+        "door_ids": [],
+        "distance_m": 11.735,
+        "notes": [
+          "assumption_user_typo_A281_to_A291"
+        ]
+      }
+    ],
+    "excluded_nodes": {
+      "reason": "Technikschacht omitted per request",
+      "ids": [
+        "0K021",
+        "0K061",
+        "0K101",
+        "0K133",
+        "0K171",
+        "0K211",
+        "0K261",
+        "0K283"
+      ]
+    }
+  }
+}

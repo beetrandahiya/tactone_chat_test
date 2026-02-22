@@ -42,6 +42,19 @@ export interface RoomSearch {
   found: boolean;
 }
 
+export interface FeedbackEntry {
+  id: string;
+  timestamp: string;
+  ipHash: string;
+  messageId: string;
+  ratings: {
+    accuracy: number;
+    clarity: number;
+    helpfulness: number;
+  };
+  customFeedback: string;
+}
+
 export interface DailyStats {
   date: string;
   totalInteractions: number;
@@ -55,6 +68,7 @@ export interface AnalyticsData {
   interactions: ChatInteraction[];
   routeQueries: RouteQuery[];
   roomSearches: RoomSearch[];
+  feedbackEntries: FeedbackEntry[];
   dailyStats: DailyStats[];
   lastUpdated: string;
 }
@@ -85,6 +99,7 @@ function getEmptyAnalytics(): AnalyticsData {
     interactions: [],
     routeQueries: [],
     roomSearches: [],
+    feedbackEntries: [],
     dailyStats: [],
     lastUpdated: new Date().toISOString(),
   };
@@ -200,6 +215,30 @@ export function logRoomSearch(params: {
   analytics.roomSearches.push(search);
   saveAnalytics(analytics);
   return search;
+}
+
+export function logFeedback(params: {
+  ip: string;
+  messageId: string;
+  ratings: { accuracy: number; clarity: number; helpfulness: number };
+  customFeedback: string;
+}): FeedbackEntry {
+  const entry: FeedbackEntry = {
+    id: generateId(),
+    timestamp: new Date().toISOString(),
+    ipHash: hashIP(params.ip),
+    messageId: params.messageId,
+    ratings: params.ratings,
+    customFeedback: params.customFeedback,
+  };
+
+  const analytics = loadAnalytics();
+  if (!analytics.feedbackEntries) {
+    analytics.feedbackEntries = [];
+  }
+  analytics.feedbackEntries.push(entry);
+  saveAnalytics(analytics);
+  return entry;
 }
 
 function updateDailyStats(analytics: AnalyticsData, interaction: ChatInteraction): void {

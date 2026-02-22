@@ -4,10 +4,14 @@ import { useChat } from "ai/react";
 import { useEffect, useRef, useState } from "react";
 import { Send, Navigation, User, Loader2, AlertCircle, MapPin } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import FeedbackPopup, { FeedbackData } from "./FeedbackPopup";
 
 export default function ChatInterface() {
   const [rateLimitError, setRateLimitError] = useState<string | null>(null);
   const [messagesRemaining, setMessagesRemaining] = useState<number | null>(null);
+  const [feedbackMessageId, setFeedbackMessageId] = useState<string | null>(null);
+  const [ratedMessages, setRatedMessages] = useState<Set<string>>(new Set());
+  const [pendingNavFeedback, setPendingNavFeedback] = useState(false);
   
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } =
     useChat({
@@ -32,6 +36,11 @@ export default function ChatInterface() {
         if (remaining) {
           setMessagesRemaining(parseInt(remaining, 10));
         }
+
+        // Check if this is a navigation response — server signals via header
+        if (response.headers.get("X-Navigation-Response") === "true") {
+          setPendingNavFeedback(true);
+        }
         
         // Handle rate limit response
         if (response.status === 429) {
@@ -54,6 +63,41 @@ export default function ChatInterface() {
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
+
+  // Show feedback popup after a navigation response finishes streaming
+  useEffect(() => {
+    if (isLoading || messages.length === 0) return;
+    // Only trigger when pendingNavFeedback was flagged by the onResponse handler
+    if (!pendingNavFeedback) return;
+    const lastMsg = messages[messages.length - 1];
+    if (
+      lastMsg.role === "assistant" &&
+      !ratedMessages.has(lastMsg.id)
+    ) {
+      setFeedbackMessageId(lastMsg.id);
+      setPendingNavFeedback(false);
+    }
+  }, [isLoading, messages, ratedMessages, pendingNavFeedback]);
+
+  const handleFeedbackSubmit = async (feedback: FeedbackData) => {
+    setRatedMessages((prev) => new Set(prev).add(feedback.messageId));
+    try {
+      await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(feedback),
+      });
+    } catch (err) {
+      console.error("Failed to submit feedback:", err);
+    }
+  };
+
+  const handleFeedbackClose = () => {
+    if (feedbackMessageId) {
+      setRatedMessages((prev) => new Set(prev).add(feedbackMessageId));
+    }
+    setFeedbackMessageId(null);
+  };
 
   return (
     <main
@@ -83,7 +127,7 @@ export default function ChatInterface() {
 
             {/* Description */}
             <p className="text-sm text-gray-500 max-w-xs leading-relaxed mb-5">
-              I can help you find your way around the HSLU Perron Building. Ask me for directions between rooms, classrooms, WCs, lifts, or any other location.
+              I can help you find your way around the HSLU Perron Building across all floors. Ask me for directions between rooms, classrooms, WCs, lifts, or any location — even across different floors.
             </p>
 
             {/* Location notice */}
@@ -100,10 +144,10 @@ export default function ChatInterface() {
             {/* Suggestion buttons - vertical stack */}
             <div className="flex flex-col gap-2.5 w-full max-w-xs">
               {[
-                "How do I get from 5A011 to 5C051?",
-                "Where are the WCs?",
-                "Find classroom 5C121",
-                "What rooms are on this floor?",
+                "How do I get from 1A011 to 5C051?",
+                "Where are the WCs on Floor 3?",
+                "Find classroom 4A051",
+                "What floors does the building have?",
               ].map((suggestion) => (
                 <button
                   key={suggestion}
@@ -131,13 +175,13 @@ export default function ChatInterface() {
 
         {/* Message bubbles */}
         {messages.map((message) => (
-          <article
-            key={message.id}
-            className={`flex ${
-              message.role === "user" ? "justify-end" : "justify-start"
-            }`}
-            aria-label={`${message.role === "user" ? "You" : "Assistant"} said`}
-          >
+          <div key={message.id}>
+            <article
+              className={`flex ${
+                message.role === "user" ? "justify-end" : "justify-start"
+              }`}
+              aria-label={`${message.role === "user" ? "You" : "Assistant"} said`}
+            >
             <div
               className={`flex items-start gap-3 max-w-[85%] ${
                 message.role === "user" ? "flex-row-reverse" : "flex-row"
@@ -218,6 +262,22 @@ export default function ChatInterface() {
               </div>
             </div>
           </article>
+
+          {/* Feedback popup after navigation responses */}
+          {message.role === "assistant" &&
+            feedbackMessageId === message.id &&
+            !isLoading && (
+              <div className="flex justify-start pl-11">
+                <div className="max-w-[85%]">
+                  <FeedbackPopup
+                    messageId={message.id}
+                    onSubmit={handleFeedbackSubmit}
+                    onClose={handleFeedbackClose}
+                  />
+                </div>
+              </div>
+            )}
+          </div>
         ))}
 
         {/* Loading indicator */}
