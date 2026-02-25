@@ -450,7 +450,7 @@ export function getZoneDistribution() {
   ];
 
   for (const room of allRooms) {
-    const match = room.match(/5([A-K])\d{3}/i);
+    const match = room.match(/\d([A-K])\d{3}/i);
     if (match) {
       const zone = match[1].toUpperCase() as keyof typeof zones;
       if (zone in zones) {

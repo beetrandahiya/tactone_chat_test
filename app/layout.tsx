@@ -7,8 +7,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Tactone",
   description:
-    "Navigate HSLU Floor 5 with ease - your friendly building navigation assistant.",
-  keywords: ["tactone", "navigation", "HSLU", "building", "wayfinding"],
+    "Navigate the HSLU Perron Building with ease — your friendly multi-floor navigation assistant.",
+  keywords: ["tactone", "navigation", "HSLU", "building", "wayfinding", "Perron"],
+  openGraph: {
+    title: "Tactone",
+    description:
+      "Navigate the HSLU Perron Building with ease — your friendly multi-floor navigation assistant.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

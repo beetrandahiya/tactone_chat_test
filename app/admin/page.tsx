@@ -4,8 +4,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Lock, Eye, EyeOff, AlertCircle } from "lucide-react";
 
-const ADMIN_PASSWORD = "tactone-admin-2026"; // Should match env variable
-
 export default function AdminLoginPage() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -18,15 +16,25 @@ export default function AdminLoginPage() {
     setError("");
     setIsLoading(true);
 
-    // Simple client-side check, but the real auth happens on API calls
-    if (password === ADMIN_PASSWORD) {
-      // Store in sessionStorage for subsequent API calls
-      sessionStorage.setItem("adminToken", password);
-      router.push("/admin/dashboard");
-    } else {
-      setError("Invalid password. Please try again.");
+    try {
+      // Validate password server-side by making a test API call
+      const response = await fetch("/api/admin/analytics", {
+        headers: {
+          Authorization: `Bearer ${password}`,
+        },
+      });
+
+      if (response.ok) {
+        // Password is valid — store for subsequent API calls
+        sessionStorage.setItem("adminToken", password);
+        router.push("/admin/dashboard");
+      } else {
+        setError("Invalid password. Please try again.");
+      }
+    } catch {
+      setError("Connection error. Please try again.");
     }
-    
+
     setIsLoading(false);
   };
 

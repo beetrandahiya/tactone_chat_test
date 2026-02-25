@@ -15,15 +15,23 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Validate ratings are 1-5
+    // Validate ratings are 0-5 (0 means not rated)
     const { accuracy, clarity, helpfulness } = ratings;
     for (const [key, val] of Object.entries({ accuracy, clarity, helpfulness })) {
-      if (typeof val !== "number" || val < 1 || val > 5) {
+      if (typeof val !== "number" || val < 0 || val > 5) {
         return NextResponse.json(
-          { error: `Invalid rating for ${key}: must be 1-5` },
+          { error: `Invalid rating for ${key}: must be 0-5` },
           { status: 400 }
         );
       }
+    }
+
+    // Ensure at least one rating is provided
+    if (accuracy === 0 && clarity === 0 && helpfulness === 0) {
+      return NextResponse.json(
+        { error: "At least one rating must be provided" },
+        { status: 400 }
+      );
     }
 
     // Get IP for hashing

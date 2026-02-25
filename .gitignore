@@ -35,3 +35,6 @@ next-env.d.ts
 
 # analytics data
 /data/
+
+# test scripts
+test-api.mjs

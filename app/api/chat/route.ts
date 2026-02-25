@@ -352,12 +352,7 @@ export async function POST(req: Request) {
       );
     }
     
-    // Log to check if API key is present
-    console.log("API Key present:", !!process.env.ANTHROPIC_API_KEY);
-    console.log("API Key prefix:", process.env.ANTHROPIC_API_KEY?.substring(0, 10));
-    
     const { messages } = await req.json();
-    console.log("Received messages:", JSON.stringify(messages));
 
     // Generate navigation context if user is asking for directions
     const navigationContext = generateNavigationContext(messages);
@@ -375,7 +370,6 @@ export async function POST(req: Request) {
       system: systemPromptWithNav,
       messages,
       onFinish: ({ text }) => {
-        console.log("Stream finished, text length:", text.length);
         // Increment rate limit only after successful response
         incrementRateLimit(ip);
         
@@ -420,8 +414,6 @@ export async function POST(req: Request) {
       },
     });
 
-    console.log("Stream created successfully");
-    
     // Add rate limit headers to response
     const response = result.toDataStreamResponse();
     response.headers.set("X-RateLimit-Remaining", rateLimitInfo.remaining.toString());
@@ -434,15 +426,12 @@ export async function POST(req: Request) {
     return response;
   } catch (error: unknown) {
     console.error("Chat API Error:", error);
-    // Return more detailed error for debugging
     const errorMessage = error instanceof Error ? error.message : "Unknown error";
-    const errorStack = error instanceof Error ? error.stack : "";
-    console.error("Error details:", errorMessage, errorStack);
     
     return new Response(
       JSON.stringify({ 
         error: "Failed to process chat request",
-        details: errorMessage 
+        details: process.env.NODE_ENV === "development" ? errorMessage : undefined
       }),
       {
         status: 500,

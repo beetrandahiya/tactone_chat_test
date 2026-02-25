@@ -17,17 +17,12 @@ export default function ChatInterface() {
     useChat({
       api: "/api/chat",
       onError: (err) => {
-        console.error("useChat error:", err);
-        console.error("Error message:", err.message);
         // Check if it's a rate limit error
         if (err.message.includes("Rate limit") || err.message.includes("message limit")) {
           setRateLimitError(err.message);
         }
       },
       onResponse: (response) => {
-        console.log("Response status:", response.status);
-        console.log("Response headers:", Object.fromEntries(response.headers.entries()));
-        
         // Clear rate limit error on successful response
         setRateLimitError(null);
         
