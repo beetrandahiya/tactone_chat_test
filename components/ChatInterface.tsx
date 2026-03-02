@@ -12,6 +12,13 @@ export default function ChatInterface() {
   const [feedbackMessageId, setFeedbackMessageId] = useState<string | null>(null);
   const [ratedMessages, setRatedMessages] = useState<Set<string>>(new Set());
   const [pendingNavFeedback, setPendingNavFeedback] = useState(false);
+  /**
+   * Holds a server-side pending feedback ID that was created before the user
+   * refreshed / returned.  When set, we show the feedback popup on load even
+   * if we don't have a matching message in the chat history.
+   */
+  const [persistentFeedbackId, setPersistentFeedbackId] = useState<string | null>(null);
+  const [persistentFeedbackPreview, setPersistentFeedbackPreview] = useState<string>("");
   
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } =
     useChat({
@@ -59,23 +66,52 @@ export default function ChatInterface() {
     inputRef.current?.focus();
   }, []);
 
-  // Show feedback popup after a navigation response finishes streaming
+  // On mount, check the server for any pending feedback from a previous session
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch("/api/feedback/pending");
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!cancelled && data.pending && data.feedbackId) {
+          setPersistentFeedbackId(data.feedbackId);
+          setPersistentFeedbackPreview(data.assistantPreview || "");
+        }
+      } catch {
+        // Silently ignore – not critical
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
+
+  // Show feedback popup after a navigation response finishes streaming.
+  // Uses a small delay to avoid the React batching race condition where
+  // pendingNavFeedback, messages, and isLoading settle in different renders.
   useEffect(() => {
     if (isLoading || messages.length === 0) return;
     // Only trigger when pendingNavFeedback was flagged by the onResponse handler
     if (!pendingNavFeedback) return;
-    const lastMsg = messages[messages.length - 1];
-    if (
-      lastMsg.role === "assistant" &&
-      !ratedMessages.has(lastMsg.id)
-    ) {
-      setFeedbackMessageId(lastMsg.id);
+
+    const timer = setTimeout(() => {
+      const lastMsg = messages[messages.length - 1];
+      if (
+        lastMsg.role === "assistant" &&
+        !ratedMessages.has(lastMsg.id)
+      ) {
+        setFeedbackMessageId(lastMsg.id);
+        // Also clear any server-side persistent entry so we don't double-show
+        setPersistentFeedbackId(null);
+      }
       setPendingNavFeedback(false);
-    }
+    }, 300);
+
+    return () => clearTimeout(timer);
   }, [isLoading, messages, ratedMessages, pendingNavFeedback]);
 
   const handleFeedbackSubmit = async (feedback: FeedbackData) => {
     setRatedMessages((prev) => new Set(prev).add(feedback.messageId));
+    setPersistentFeedbackId(null);
     try {
       await fetch("/api/feedback", {
         method: "POST",
@@ -92,6 +128,13 @@ export default function ChatInterface() {
       setRatedMessages((prev) => new Set(prev).add(feedbackMessageId));
     }
     setFeedbackMessageId(null);
+
+    // If we're dismissing a persistent (server-side) feedback entry, tell
+    // the server so it won't show again on the next visit.
+    if (persistentFeedbackId) {
+      setPersistentFeedbackId(null);
+      fetch("/api/feedback/pending?dismiss=true").catch(() => {});
+    }
   };
 
   return (
@@ -107,6 +150,25 @@ export default function ChatInterface() {
         aria-live="polite"
         aria-atomic="false"
       >
+        {/* Persistent feedback popup — shown on page load if the server has
+            an un-submitted feedback entry for this user's IP */}
+        {persistentFeedbackId && !feedbackMessageId && (
+          <div className="flex justify-start pl-11 mb-2">
+            <div className="max-w-[85%]">
+              {persistentFeedbackPreview && (
+                <p className="text-xs text-gray-500 mb-1 px-1">
+                  You recently received directions — we&apos;d love your feedback!
+                </p>
+              )}
+              <FeedbackPopup
+                messageId={persistentFeedbackId}
+                onSubmit={handleFeedbackSubmit}
+                onClose={handleFeedbackClose}
+              />
+            </div>
+          </div>
+        )}
+
         {/* Welcome message when no messages */}
         {messages.length === 0 && (
           <div className="flex flex-col items-center justify-center h-full text-center px-2">

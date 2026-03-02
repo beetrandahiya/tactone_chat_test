@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { logFeedback } from "@/lib/analytics";
+import { clearPendingFeedback } from "@/lib/pendingFeedback";
 
 export async function POST(req: NextRequest) {
   try {
@@ -46,6 +47,9 @@ export async function POST(req: NextRequest) {
       ratings: { accuracy, clarity, helpfulness },
       customFeedback: typeof customFeedback === "string" ? customFeedback.slice(0, 500) : "",
     });
+
+    // Clear the pending-feedback flag for this IP so it won't re-appear on next visit
+    clearPendingFeedback(ip);
 
     return NextResponse.json({ success: true });
   } catch (error) {

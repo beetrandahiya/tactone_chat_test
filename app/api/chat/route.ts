@@ -11,6 +11,8 @@ import {
   getAllFloors,
 } from "@/lib/pathfinding";
 import { logInteraction, logRouteQuery, logRoomSearch } from "@/lib/analytics";
+import { setPendingFeedback } from "@/lib/pendingFeedback";
+import { generateId } from "@/lib/analytics";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -357,6 +359,10 @@ export async function POST(req: Request) {
     // Generate navigation context if user is asking for directions
     const navigationContext = generateNavigationContext(messages);
     const systemPromptWithNav = SYSTEM_PROMPT + navigationContext;
+    const isNavResponse = navigationContext.length > 0;
+
+    // Pre-generate the pending feedback ID so onFinish can update the preview
+    const pendingFeedbackId = isNavResponse ? `nav-${generateId()}` : null;
 
     // Track timing for analytics
     const startTime = Date.now();
@@ -411,6 +417,15 @@ export async function POST(req: Request) {
         } catch (logError) {
           console.error("Analytics logging error:", logError);
         }
+
+        // Update pending feedback entry with the assistant response preview
+        if (isNavResponse && pendingFeedbackId) {
+          setPendingFeedback(ip, {
+            feedbackId: pendingFeedbackId,
+            createdAt: new Date().toISOString(),
+            assistantPreview: text.substring(0, 200),
+          });
+        }
       },
     });
 
@@ -419,8 +434,18 @@ export async function POST(req: Request) {
     response.headers.set("X-RateLimit-Remaining", rateLimitInfo.remaining.toString());
 
     // Signal to the client that this response contains navigation directions
-    if (navigationContext.length > 0) {
+    if (isNavResponse && pendingFeedbackId) {
       response.headers.set("X-Navigation-Response", "true");
+
+      // Record pending feedback so the popup re-appears if the user
+      // refreshes or returns before submitting feedback.
+      // The assistantPreview is empty here; onFinish updates it once
+      // streaming completes.
+      setPendingFeedback(ip, {
+        feedbackId: pendingFeedbackId,
+        createdAt: new Date().toISOString(),
+        assistantPreview: "",
+      });
     }
     
     return response;
