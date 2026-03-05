@@ -5,6 +5,20 @@
 
 import fs from "fs";
 import path from "path";
+import {
+  isKVAvailable,
+  saveInteraction as kvSaveInteraction,
+  saveFeedback as kvSaveFeedback,
+  saveRouteQuery as kvSaveRouteQuery,
+  saveRoomSearch as kvSaveRoomSearch,
+  saveDailyStats as kvSaveDailyStats,
+  getAllFeedback as kvGetAllFeedback,
+  getAllInteractions as kvGetAllInteractions,
+  getAllRouteQueries as kvGetAllRouteQueries,
+  getAllRoomSearches as kvGetAllRoomSearches,
+  getRecentInteractions as kvGetRecentInteractions,
+  getRecentDailyStats as kvGetRecentDailyStats,
+} from "./kvStore";
 
 // ============ DATA TYPES ============
 
@@ -172,6 +186,13 @@ export function logInteraction(params: {
     tokenCount: params.tokenCount,
   };
 
+  // Persist to Redis in production, file in dev
+  if (isKVAvailable()) {
+    kvSaveInteraction(interaction).catch((err) =>
+      console.error("KV saveInteraction error:", err)
+    );
+  }
+
   const analytics = loadAnalytics();
   analytics.interactions.push(interaction);
   
@@ -194,6 +215,12 @@ export function logRouteQuery(params: {
     ...params,
   };
 
+  if (isKVAvailable()) {
+    kvSaveRouteQuery(query).catch((err) =>
+      console.error("KV saveRouteQuery error:", err)
+    );
+  }
+
   const analytics = loadAnalytics();
   analytics.routeQueries.push(query);
   saveAnalytics(analytics);
@@ -210,6 +237,12 @@ export function logRoomSearch(params: {
     timestamp: new Date().toISOString(),
     ...params,
   };
+
+  if (isKVAvailable()) {
+    kvSaveRoomSearch(search).catch((err) =>
+      console.error("KV saveRoomSearch error:", err)
+    );
+  }
 
   const analytics = loadAnalytics();
   analytics.roomSearches.push(search);
@@ -231,6 +264,12 @@ export function logFeedback(params: {
     ratings: params.ratings,
     customFeedback: params.customFeedback,
   };
+
+  if (isKVAvailable()) {
+    kvSaveFeedback(entry).catch((err) =>
+      console.error("KV saveFeedback error:", err)
+    );
+  }
 
   const analytics = loadAnalytics();
   if (!analytics.feedbackEntries) {
@@ -280,11 +319,68 @@ function updateDailyStats(analytics: AnalyticsData, interaction: ChatInteraction
     const totalTime = todayWithResponseTime.reduce((sum, i) => sum + (i.responseTime || 0), 0);
     dayStats.avgResponseTime = Math.round(totalTime / todayWithResponseTime.length);
   }
+
+  // Also persist daily stats to KV
+  if (isKVAvailable()) {
+    kvSaveDailyStats(dayStats).catch((err) =>
+      console.error("KV saveDailyStats error:", err)
+    );
+  }
 }
 
 // ============ ANALYTICS QUERIES ============
 
 export function getAnalyticsSummary() {
+  return _getAnalyticsSummarySync();
+}
+
+/** Async version that reads from KV in production. */
+export async function getAnalyticsSummaryAsync() {
+  if (isKVAvailable()) {
+    const [interactions, routeQueries, roomSearches, dailyStats] =
+      await Promise.all([
+        kvGetAllInteractions(),
+        kvGetAllRouteQueries(),
+        kvGetAllRoomSearches(),
+        kvGetRecentDailyStats(30),
+      ]);
+
+    const now = new Date();
+    const last24h = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+    const last7d = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    const last30d = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+
+    const last24hI = interactions.filter((i) => new Date(i.timestamp) > last24h);
+    const last7dI = interactions.filter((i) => new Date(i.timestamp) > last7d);
+    const last30dI = interactions.filter((i) => new Date(i.timestamp) > last30d);
+
+    return {
+      overview: {
+        totalInteractions: interactions.length,
+        totalRouteQueries: routeQueries.length,
+        totalRoomSearches: roomSearches.length,
+        uniqueUsers: new Set(interactions.map((i) => i.ipHash)).size,
+      },
+      last24h: {
+        interactions: last24hI.length,
+        uniqueUsers: new Set(last24hI.map((i) => i.ipHash)).size,
+      },
+      last7d: {
+        interactions: last7dI.length,
+        uniqueUsers: new Set(last7dI.map((i) => i.ipHash)).size,
+      },
+      last30d: {
+        interactions: last30dI.length,
+        uniqueUsers: new Set(last30dI.map((i) => i.ipHash)).size,
+      },
+      dailyStats,
+      lastUpdated: new Date().toISOString(),
+    };
+  }
+  return _getAnalyticsSummarySync();
+}
+
+function _getAnalyticsSummarySync() {
   const analytics = loadAnalytics();
   const now = new Date();
   const last24h = new Date(now.getTime() - 24 * 60 * 60 * 1000);
@@ -462,4 +558,129 @@ export function getZoneDistribution() {
   }
 
   return Object.entries(zones).map(([zone, count]) => ({ zone, count }));
+}
+
+// ============ ASYNC VERSIONS (for admin dashboard — reads from KV in production) ============
+
+export async function getTopRoutesAsync(limit: number = 10) {
+  const routeQueries = isKVAvailable() ? await kvGetAllRouteQueries() : loadAnalytics().routeQueries;
+  const routeCounts = new Map<string, number>();
+  for (const query of routeQueries) {
+    const key = `${query.fromRoom} → ${query.toRoom}`;
+    routeCounts.set(key, (routeCounts.get(key) || 0) + 1);
+  }
+  return Array.from(routeCounts.entries())
+    .map(([route, count]) => ({ route, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, limit);
+}
+
+export async function getTopRoomSearchesAsync(limit: number = 10) {
+  const roomSearches = isKVAvailable() ? await kvGetAllRoomSearches() : loadAnalytics().roomSearches;
+  const roomCounts = new Map<string, number>();
+  for (const search of roomSearches) {
+    roomCounts.set(search.roomId, (roomCounts.get(search.roomId) || 0) + 1);
+  }
+  return Array.from(roomCounts.entries())
+    .map(([roomId, count]) => ({ roomId, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, limit);
+}
+
+export async function getTopQuestionsAsync(limit: number = 10) {
+  const interactions = isKVAvailable() ? await kvGetAllInteractions() : loadAnalytics().interactions;
+  const questionCounts = new Map<string, number>();
+  for (const interaction of interactions) {
+    const normalized = interaction.userMessage.toLowerCase().trim();
+    questionCounts.set(normalized, (questionCounts.get(normalized) || 0) + 1);
+  }
+  return Array.from(questionCounts.entries())
+    .map(([question, count]) => ({ question, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, limit);
+}
+
+export async function getQuestionCategoriesAsync() {
+  const interactions = isKVAvailable() ? await kvGetAllInteractions() : loadAnalytics().interactions;
+  const categories = { navigation: 0, roomSearch: 0, facilities: 0, general: 0 };
+  for (const interaction of interactions) {
+    const msg = interaction.userMessage.toLowerCase();
+    if ((msg.includes("from") && msg.includes("to")) || msg.includes("how do i get") || msg.includes("directions")) {
+      categories.navigation++;
+    } else if (msg.includes("where is") || msg.includes("find") || msg.match(/5[A-K]\d{3}/i)) {
+      categories.roomSearch++;
+    } else if (msg.includes("wc") || msg.includes("toilet") || msg.includes("lift") || msg.includes("stairs")) {
+      categories.facilities++;
+    } else {
+      categories.general++;
+    }
+  }
+  return categories;
+}
+
+export async function getHourlyDistributionAsync() {
+  const interactions = isKVAvailable() ? await kvGetAllInteractions() : loadAnalytics().interactions;
+  const hours = new Array(24).fill(0);
+  for (const interaction of interactions) {
+    const hour = new Date(interaction.timestamp).getHours();
+    hours[hour]++;
+  }
+  return hours.map((count, hour) => ({
+    hour: `${hour.toString().padStart(2, "0")}:00`,
+    count,
+  }));
+}
+
+export async function getRecentInteractionsAsync(limit: number = 50) {
+  const interactions = isKVAvailable()
+    ? await kvGetRecentInteractions(limit)
+    : loadAnalytics().interactions.slice(-limit).reverse();
+  return interactions.map((i) => ({
+    id: i.id,
+    timestamp: i.timestamp,
+    userMessage: i.userMessage.substring(0, 100) + (i.userMessage.length > 100 ? "..." : ""),
+    hasNavigation: !!i.navigationData?.fromRoom,
+    responseTime: i.responseTime,
+  }));
+}
+
+export async function getRoomTypeDistributionAsync() {
+  const roomSearches = isKVAvailable() ? await kvGetAllRoomSearches() : loadAnalytics().roomSearches;
+  const typeCounts = new Map<string, number>();
+  for (const search of roomSearches) {
+    typeCounts.set(search.roomType, (typeCounts.get(search.roomType) || 0) + 1);
+  }
+  return Array.from(typeCounts.entries())
+    .map(([type, count]) => ({ type, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export async function getZoneDistributionAsync() {
+  const [routeQueries, roomSearches] = isKVAvailable()
+    ? await Promise.all([kvGetAllRouteQueries(), kvGetAllRoomSearches()])
+    : [loadAnalytics().routeQueries, loadAnalytics().roomSearches];
+  const zones = { A: 0, B: 0, C: 0, K: 0, Other: 0 };
+  const allRooms = [
+    ...routeQueries.flatMap((q) => [q.fromRoom, q.toRoom]),
+    ...roomSearches.map((s) => s.roomId),
+  ];
+  for (const room of allRooms) {
+    const match = room.match(/\d([A-K])\d{3}/i);
+    if (match) {
+      const zone = match[1].toUpperCase() as keyof typeof zones;
+      if (zone in zones) {
+        zones[zone]++;
+      } else {
+        zones.Other++;
+      }
+    }
+  }
+  return Object.entries(zones).map(([zone, count]) => ({ zone, count }));
+}
+
+export async function getAllFeedbackAsync(): Promise<FeedbackEntry[]> {
+  if (isKVAvailable()) {
+    return kvGetAllFeedback();
+  }
+  return loadAnalytics().feedbackEntries || [];
 }

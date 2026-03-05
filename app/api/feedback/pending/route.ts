@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ pending: false });
   }
 
-  const entry = getPendingFeedback(ip);
+  const entry = await getPendingFeedback(ip);
 
   if (!entry) {
     return NextResponse.json({ pending: false });

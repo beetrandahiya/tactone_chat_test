@@ -1,14 +1,15 @@
 import { NextRequest } from "next/server";
 import {
-  getAnalyticsSummary,
-  getTopRoutes,
-  getTopRoomSearches,
-  getTopQuestions,
-  getQuestionCategories,
-  getHourlyDistribution,
-  getRecentInteractions,
-  getRoomTypeDistribution,
-  getZoneDistribution,
+  getAnalyticsSummaryAsync,
+  getTopRoutesAsync,
+  getTopRoomSearchesAsync,
+  getTopQuestionsAsync,
+  getQuestionCategoriesAsync,
+  getHourlyDistributionAsync,
+  getRecentInteractionsAsync,
+  getRoomTypeDistributionAsync,
+  getZoneDistributionAsync,
+  getAllFeedbackAsync,
 } from "@/lib/analytics";
 
 // Simple admin authentication
@@ -34,15 +35,29 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const summary = getAnalyticsSummary();
-    const topRoutes = getTopRoutes(10);
-    const topRoomSearches = getTopRoomSearches(10);
-    const topQuestions = getTopQuestions(15);
-    const questionCategories = getQuestionCategories();
-    const hourlyDistribution = getHourlyDistribution();
-    const recentInteractions = getRecentInteractions(50);
-    const roomTypeDistribution = getRoomTypeDistribution();
-    const zoneDistribution = getZoneDistribution();
+    const [
+      summary,
+      topRoutes,
+      topRoomSearches,
+      topQuestions,
+      questionCategories,
+      hourlyDistribution,
+      recentInteractions,
+      roomTypeDistribution,
+      zoneDistribution,
+      feedbackEntries,
+    ] = await Promise.all([
+      getAnalyticsSummaryAsync(),
+      getTopRoutesAsync(10),
+      getTopRoomSearchesAsync(10),
+      getTopQuestionsAsync(15),
+      getQuestionCategoriesAsync(),
+      getHourlyDistributionAsync(),
+      getRecentInteractionsAsync(50),
+      getRoomTypeDistributionAsync(),
+      getZoneDistributionAsync(),
+      getAllFeedbackAsync(),
+    ]);
 
     return new Response(
       JSON.stringify({
@@ -55,6 +70,7 @@ export async function GET(request: NextRequest) {
         recentInteractions,
         roomTypeDistribution,
         zoneDistribution,
+        feedbackEntries,
       }),
       { 
         status: 200, 

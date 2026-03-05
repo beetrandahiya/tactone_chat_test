@@ -6,10 +6,16 @@
  * to check whether it should show the feedback popup immediately — even on a
  * fresh page load / returning visit.
  *
- * This is an in-memory store; it resets on server restart, which is acceptable
- * for the single-virtual-user test deployment.  For production, swap with Redis
- * or a database.
+ * In production (when Upstash env vars are set) we use Redis so data survives
+ * across serverless cold starts.  Locally we fall back to an in-memory Map.
  */
+
+import {
+  isKVAvailable,
+  setPendingFeedbackKV,
+  getPendingFeedbackKV,
+  clearPendingFeedbackKV,
+} from "./kvStore";
 
 export interface PendingFeedbackEntry {
   /** Unique ID the client can use as the messageId when submitting feedback */
@@ -24,6 +30,7 @@ export interface PendingFeedbackEntry {
  * Map from IP → latest pending feedback entry.
  * We only keep the **most recent** pending feedback per IP — if the user
  * triggered multiple nav responses without rating, only the last one matters.
+ * (In-memory fallback for local dev.)
  */
 const pendingStore = new Map<string, PendingFeedbackEntry>();
 
@@ -33,16 +40,33 @@ export function setPendingFeedback(
   entry: PendingFeedbackEntry
 ): void {
   pendingStore.set(ip, entry);
+
+  if (isKVAvailable()) {
+    setPendingFeedbackKV(ip, entry).catch((err) =>
+      console.error("KV setPendingFeedback error:", err)
+    );
+  }
 }
 
 /** Retrieve the pending feedback entry for an IP (if any). */
-export function getPendingFeedback(
+export async function getPendingFeedback(
   ip: string
-): PendingFeedbackEntry | null {
+): Promise<PendingFeedbackEntry | null> {
+  // Prefer KV in production
+  if (isKVAvailable()) {
+    const entry = await getPendingFeedbackKV(ip);
+    if (entry) return entry;
+  }
   return pendingStore.get(ip) ?? null;
 }
 
 /** Clear the pending feedback for an IP (called after feedback is submitted or dismissed). */
 export function clearPendingFeedback(ip: string): void {
   pendingStore.delete(ip);
+
+  if (isKVAvailable()) {
+    clearPendingFeedbackKV(ip).catch((err) =>
+      console.error("KV clearPendingFeedback error:", err)
+    );
+  }
 }
